@@ -11,3 +11,4 @@ __pycache__/
 FocusGuard_AI_Demo*.mp4
 FocusGuard_AI_QA_Test_Report.pdf
 TEST_ACCOUNTS.md
+!FocusGuard_AI_Demo.mp4
