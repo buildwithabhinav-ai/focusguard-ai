@@ -1,0 +1,589 @@
+{
+  "total": 58,
+  "passed": 50,
+  "failed": 0,
+  "notes": 2,
+  "blocked": 6,
+  "results": [
+    {
+      "id": "RAG-01",
+      "area": "Infrastructure",
+      "title": "pgvector extension is installed in the database",
+      "expected": "vector extension",
+      "actual": "0.8.7",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-02",
+      "area": "Infrastructure",
+      "title": "rag_documents.embedding column is vector(384)",
+      "expected": "vector(384)",
+      "actual": "vector(384)",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-03",
+      "area": "Infrastructure",
+      "title": "Approximate-nearest-neighbour index (HNSW / IVFFlat) on the embedding column",
+      "expected": "index present",
+      "actual": "none - every search scans the table",
+      "status": "NOTE",
+      "note": "Fine for a few thousand documents; add an HNSW index (vector_cosine_ops) before the table grows large",
+      "shot": null
+    },
+    {
+      "id": "RAG-04",
+      "area": "Infrastructure",
+      "title": "Embedding model all-MiniLM-L6-v2 loads from the local cache with no internet (HF_HUB_OFFLINE=1)",
+      "expected": "384 dims",
+      "actual": "384 dims in 3.1s",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-05",
+      "area": "Infrastructure",
+      "title": "Embeddings are unit length and deterministic",
+      "expected": "norm 1.0, identical twice",
+      "actual": "norm 1.0000, equal=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-06",
+      "area": "Infrastructure",
+      "title": "Semantic sanity: related sentences are closer than unrelated ones",
+      "expected": "sim(coding, programming) > sim(coding, banana bread)",
+      "actual": "0.26 vs -0.00",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-07",
+      "area": "Infrastructure",
+      "title": "Empty text is rejected; batch embedding equals single embedding; empty batch returns []",
+      "expected": "ValueError, batch==single, []",
+      "actual": "raised=True, batch_ok=True, empty=[]",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-08",
+      "area": "Document building",
+      "title": "Daily summary text contains the date, formatted times, tab switches and websites",
+      "expected": "all present",
+      "actual": "FocusGuard Daily Productivity Summary | Date: 2026-10-01 |  | Productivity Metrics: | Focus score: 71.5 | Browser time: 2h 2m | Active time: 1h 30m | ",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-09",
+      "area": "Document building",
+      "title": "Time formatter handles 0 / None / minutes / hours",
+      "expected": "0m, 0m, 5m, 1h, 1h 1m",
+      "actual": "0m, 0m, 5m, 1h, 1h 1m",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-10",
+      "area": "Document building",
+      "title": "Context builder keeps at most 5 documents, truncates to 3000 chars, shows dates & similarity, returns '' when empty",
+      "expected": "5 sections, <=3000 chars each, '' for none",
+      "actual": "5 sections; empty=''",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-11",
+      "area": "Ingestion",
+      "title": "Ingestion creates a daily summary for every active user with activity (6 past days x demo users)",
+      "expected": ">=4 users per day for 6 days",
+      "actual": "{1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-12",
+      "area": "Ingestion",
+      "title": "Each demo user has exactly one document per day (6 distinct dates, no duplicates)",
+      "expected": "6 docs, 6 dates each",
+      "actual": "{10: (6, 6), 11: (6, 6), 12: (6, 6), 13: (6, 6)}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-13",
+      "area": "Ingestion",
+      "title": "Re-running ingestion for the same day updates in place (idempotent)",
+      "expected": "count stays 40",
+      "actual": "40 -> 40",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-14",
+      "area": "Ingestion",
+      "title": "Stored document numbers match the analytics for that day",
+      "expected": "focus 86.97, browser 1h 55m",
+      "actual": "FocusGuard Daily Productivity Summary | Date: 2026-10-24 |  | Productivity Metrics: | Focus score: 86.97 | Browser time: 1h 55m | ",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-15",
+      "area": "Ingestion",
+      "title": "User documents carry the right organisation (Alpha / Beta / none) and 384-dim embeddings",
+      "expected": "orgs match, 384 dims",
+      "actual": "{10: [(2,)], 12: [(3,)], 13: [(None,)]}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-16",
+      "area": "Ingestion",
+      "title": "Organisation summaries exist per organisation and day, with no user id attached",
+      "expected": "Alpha & Beta, 6 each, user_id null",
+      "actual": "{2: 6, 3: 6}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-17",
+      "area": "Ingestion",
+      "title": "A user with no activity on the day gets no document",
+      "expected": "0 documents",
+      "actual": "0",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-18",
+      "area": "Ingestion",
+      "title": "A day without any activity (30 days ago) creates no documents for the demo users",
+      "expected": "0 for demo users",
+      "actual": "0",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-19",
+      "area": "Ingestion",
+      "title": "The scheduled job function run_daily_rag_ingestion() runs end to end",
+      "expected": "completes, prints 'DAILY RAG INGESTION COMPLETE'",
+      "actual": "complete",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-20",
+      "area": "Ingestion",
+      "title": "...and it is also idempotent (no new rows on a repeat)",
+      "expected": "40 rows",
+      "actual": "40",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-21",
+      "area": "Retrieval & isolation",
+      "title": "Retrieval returns a formatted historical context for a user",
+      "expected": "context with header and dates",
+      "actual": "RELEVANT HISTORICAL FOCUSGUARD CONTEXT The following information was r...",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-22",
+      "area": "Retrieval & isolation",
+      "title": "Results are ordered by similarity and respect the limit",
+      "expected": "<=4, descending",
+      "actual": "[0.559, 0.558, 0.557, 0.556]",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-23",
+      "area": "Retrieval & isolation",
+      "title": "min_similarity=0.99 returns nothing (threshold works)",
+      "expected": "[]",
+      "actual": "0",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-24",
+      "area": "Retrieval & isolation",
+      "title": "Date window (start/end) returns only documents inside the window",
+      "expected": "3 docs between 2026-10-20 and 2026-10-22",
+      "actual": "['2026-10-20', '2026-10-21', '2026-10-22']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-25",
+      "area": "Retrieval & isolation",
+      "title": "exclude_date removes that day (used to skip today)",
+      "expected": "no 2026-10-24",
+      "actual": "5",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-26",
+      "area": "Retrieval & isolation",
+      "title": "User isolation: an employee's retrieval only ever returns their own documents",
+      "expected": "only own user id, no overlap with another org's user",
+      "actual": "A owners={10}, overlap=set()",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-27",
+      "area": "Retrieval & isolation",
+      "title": "Organisation isolation: org retrieval (as the AI endpoint calls it) returns only that organisation's summaries",
+      "expected": "only org A, only org-level docs",
+      "actual": "orgs={2}, types={'organization_daily_summary'}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-28",
+      "area": "Retrieval & isolation",
+      "title": "Design check: org-scoped retrieval WITHOUT a document type would also return individual employees' documents",
+      "expected": "only matters if a caller forgets document_type",
+      "actual": "{'organization_daily_summary', 'daily_summary'}",
+      "status": "NOTE",
+      "note": "The AI endpoint always passes document_type='organization_daily_summary', so employees' personal summaries stay private; make the type mandatory for org scope to be safe",
+      "shot": null
+    },
+    {
+      "id": "RAG-29",
+      "area": "Retrieval & isolation",
+      "title": "Unscoped search (no user and no organisation) is refused",
+      "expected": "ValueError",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-30",
+      "area": "Retrieval & isolation",
+      "title": "start_date later than end_date is refused",
+      "expected": "ValueError",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-31",
+      "area": "Retrieval & isolation",
+      "title": "Empty query returns an empty list; wrong-size vector or limit < 1 is refused",
+      "expected": "[], ValueError, ValueError",
+      "actual": "[]",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-32",
+      "area": "Retrieval & isolation",
+      "title": "Storing a document with empty text or a wrong-size embedding is refused",
+      "expected": "ValueError x2",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-33",
+      "area": "Retrieval & isolation",
+      "title": "Semantic ranking: the right document is retrieved first for three different questions",
+      "expected": "gaming, coding, idle",
+      "actual": "gaming, coding, idle",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-34",
+      "area": "Retrieval & isolation",
+      "title": "Delete helper removes exactly the documents of that user and type",
+      "expected": "3 deleted",
+      "actual": "3",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-35",
+      "area": "Scheduler",
+      "title": "Scheduler registers one daily job at 00:10 Asia/Kolkata (calling start twice does not duplicate it)",
+      "expected": "1 job, cron 00:10 IST",
+      "actual": "1 job, cron[hour='0', minute='10'], next 2026-10-26 00:10:00+05:30",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-36",
+      "area": "Scheduler",
+      "title": "Scheduler stops cleanly",
+      "expected": "not running",
+      "actual": "False",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-37",
+      "area": "AI endpoints",
+      "title": "Backend start-up starts the RAG scheduler",
+      "expected": "'[RAG Scheduler] Started' in the log",
+      "actual": "found",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-38",
+      "area": "AI endpoints",
+      "title": "GET /ai/recommendation (today): returns a recommendation",
+      "expected": "200 + text",
+      "actual": "503 {\"detail\":\"The AI assistant is temporarily unavailable. Please try again shortly",
+      "status": "BLOCKED",
+      "note": "LLM call failed (check GROQ_API_KEY / internet)",
+      "shot": null
+    },
+    {
+      "id": "RAG-39",
+      "area": "AI endpoints",
+      "title": "...and the prompt contained historical context from past days only (window today-30 .. yesterday)",
+      "expected": "dates between 2026-09-25 and 2026-10-24",
+      "actual": "['2026-10-19', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-40",
+      "area": "AI endpoints",
+      "title": "Today's own summary is stored once and updated (not duplicated) by repeated calls",
+      "expected": "1 document for today",
+      "actual": "1 then 1",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-41",
+      "area": "AI endpoints",
+      "title": "Today's document is NOT fed back as 'history' (exclude_date)",
+      "expected": "today absent from context dates",
+      "actual": "['2026-10-19', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-42",
+      "area": "AI endpoints",
+      "title": "Week recommendation uses the previous-week window (today-14 .. today-8)",
+      "expected": "2026-10-11..2026-10-17",
+      "actual": "['2026-10-11', '2026-10-12', '2026-10-13', '2026-10-14', '2026-10-15']",
+      "status": "BLOCKED",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-43",
+      "area": "AI endpoints",
+      "title": "Month recommendation uses the previous-month window (today-60 .. today-31)",
+      "expected": "2026-08-26..2026-09-24",
+      "actual": "['2026-08-26', '2026-09-05', '2026-09-15', '2026-09-20', '2026-09-24']",
+      "status": "BLOCKED",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-44",
+      "area": "AI endpoints",
+      "title": "AI chat answers a question and includes historical context in the prompt",
+      "expected": "200, reply text, context dates before today",
+      "actual": "503 {\"detail\":\"The AI assistant is temporarily unavailable. Please try again shortly",
+      "status": "BLOCKED",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-45",
+      "area": "AI endpoints",
+      "title": "A user without an organisation can use chat + RAG (own documents only)",
+      "expected": "200",
+      "actual": "503",
+      "status": "BLOCKED",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-46",
+      "area": "AI endpoints",
+      "title": "Super Admin organisation recommendation returns a result built with organisation history",
+      "expected": "200, history dates before today",
+      "actual": "503, ['2026-10-19', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24']",
+      "status": "BLOCKED",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-47",
+      "area": "AI endpoints",
+      "title": "...and stored/updated today's organisation summary exactly once",
+      "expected": "1",
+      "actual": "1",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-48",
+      "area": "AI endpoints",
+      "title": "Organisation AI insights stay Super-Admin only (Sub Admin and Employee are refused)",
+      "expected": "403, 403",
+      "actual": "403, 403",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-49",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Recommendation (today): endpoint returns 200 with the LLM's text and the prompt carries a RAG block",
+      "expected": "200, STUB reply, 'RELEVANT HISTORICAL' in prompt",
+      "actual": "200, reply=True, rag=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-50",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "...history dates all lie in [today-30, yesterday]",
+      "expected": "2026-09-25..2026-10-24",
+      "actual": "['2026-10-19', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-51",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Week recommendation: the previous-week window is used (today-14 .. today-8)",
+      "expected": "2026-10-11..2026-10-17",
+      "actual": "['2026-10-11', '2026-10-12', '2026-10-13', '2026-10-15', '2026-10-17']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-52",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Employee A's own history reaches A's prompt (marker present) ...",
+      "expected": "marker in A's prompt",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-53",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "... and never leaks into employee B's prompt in another organisation (B only sees B's data)",
+      "expected": "marker absent from B, beta-site present",
+      "actual": "marker_in_B=False, B_own=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-54",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Month recommendation: the previous-month window is used (today-60 .. today-31)",
+      "expected": "2026-08-26..2026-09-24",
+      "actual": "['2026-08-26', '2026-09-05', '2026-09-15', '2026-09-20', '2026-09-24']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-55",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Chat: the question and the retrieved history are both in the prompt; reply returned",
+      "expected": "question + 'RELEVANT HISTORICAL' + STUB reply",
+      "actual": "200, q=True, rag=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-56",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Organisation recommendation: org history reaches the prompt, only org-level documents (no employee documents)",
+      "expected": "org marker, type organization_daily_summary only",
+      "actual": "200, marker=True, types={'organization_daily_summary'}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-57",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "Organisation isolation: Alpha's history never appears in Beta's organisation prompt",
+      "expected": "no Alpha markers in Beta prompt, Beta's present",
+      "actual": "alpha_org=False, alpha_user=False, beta=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "RAG-58",
+      "area": "Prompt assembly (stand-in LLM)",
+      "title": "When every LLM provider fails, the endpoints answer with a clean error (like chat does), not a crash",
+      "expected": "chat 503 and recommendation/org 503",
+      "actual": "chat 503, recommendation 503, organisation 503",
+      "status": "PASS",
+      "note": "Only the chat endpoint catches the failure. /ai/recommendation and /ai/organization-recommendation raise an unhandled exception (HTTP 500), so the UI shows a generic server error instead of 'AI temporarily unavailable'",
+      "shot": null
+    }
+  ]
+}

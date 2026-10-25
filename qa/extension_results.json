@@ -1,0 +1,114 @@
+{
+  "total": 12,
+  "passed": 12,
+  "results": [
+    {
+      "id": "EXT-01",
+      "title": "worker starts on github.com (first tracked tab is not a switch)",
+      "expected": "0 switches",
+      "actual": "0 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-02",
+      "title": "github -> stackoverflow",
+      "expected": "1 switches",
+      "actual": "1 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-03",
+      "title": "stackoverflow -> youtube AFTER worker restart (was lost before the fix)",
+      "expected": "2 switches",
+      "actual": "2 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-04",
+      "title": "youtube -> gmail with activated+updated firing together counts once",
+      "expected": "3 switches",
+      "actual": "3 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-05",
+      "title": "title change on the same page is not a switch",
+      "expected": "3 switches",
+      "actual": "3 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-06",
+      "title": "moving between pages of one site in one tab is not a switch",
+      "expected": "3 switches",
+      "actual": "3 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-07",
+      "title": "same tab navigates to another website",
+      "expected": "4 switches",
+      "actual": "4 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-08",
+      "title": "switching between two tabs of the same site counts",
+      "expected": "5 switches",
+      "actual": "5 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-09",
+      "title": "opening chrome://newtab is ignored",
+      "expected": "5 switches",
+      "actual": "5 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-10",
+      "title": "coming back from chrome://newtab to the same site adds no fake switch",
+      "expected": "5 switches",
+      "actual": "5 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-11",
+      "title": "focusing another Chrome window with another site counts",
+      "expected": "6 switches",
+      "actual": "6 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "EXT-12",
+      "title": "close tab, land on another site counts",
+      "expected": "7 switches",
+      "actual": "7 switches",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    }
+  ]
+}

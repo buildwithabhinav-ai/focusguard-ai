@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+*.db
+*.sqlite3
+.DS_Store
+.vscode/
+.idea/
+FocusGuard_AI_Demo*.mp4
+FocusGuard_AI_QA_Test_Report.pdf
+TEST_ACCOUNTS.md

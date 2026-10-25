@@ -1,0 +1,1831 @@
+{
+  "run": "b5b6d1",
+  "when": "2026-10-25T12:46:05",
+  "total": 201,
+  "passed": 185,
+  "failed": 16,
+  "blocked": 0,
+  "results": [
+    {
+      "id": "AUTH-01",
+      "area": "Authentication",
+      "title": "Super Admin login returns tokens and role SUPER_ADMIN",
+      "expected": "SUPER_ADMIN",
+      "actual": "SUPER_ADMIN",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-02",
+      "area": "Authentication",
+      "title": "Sub Admin login returns tokens and role SUB_ADMIN",
+      "expected": "SUB_ADMIN",
+      "actual": "SUB_ADMIN",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-03",
+      "area": "Authentication",
+      "title": "Employee login returns tokens and role USER",
+      "expected": "USER",
+      "actual": "USER",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-04",
+      "area": "Authentication",
+      "title": "Standalone user login returns tokens and role USER",
+      "expected": "USER",
+      "actual": "USER",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-05",
+      "area": "Authentication",
+      "title": "Login with wrong password is rejected",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": "Invalid Password"
+    },
+    {
+      "id": "AUTH-06",
+      "area": "Authentication",
+      "title": "Login with unknown e-mail is rejected",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": "Invalid Email"
+    },
+    {
+      "id": "AUTH-07",
+      "area": "Authentication",
+      "title": "Login with malformed e-mail is rejected",
+      "expected": "422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-08",
+      "area": "Authentication",
+      "title": "Login with missing password field is rejected",
+      "expected": "422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-09",
+      "area": "Authentication",
+      "title": "Protected endpoint without token is rejected",
+      "expected": "401/403",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-10",
+      "area": "Authentication",
+      "title": "Protected endpoint with garbage token is rejected",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": "Invalid authentication token."
+    },
+    {
+      "id": "AUTH-11",
+      "area": "Authentication",
+      "title": "Expired access token is rejected with a session-expired message",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": "Your login session has expired. Please log in again."
+    },
+    {
+      "id": "AUTH-12",
+      "area": "Authentication",
+      "title": "Token signed with a different secret is rejected",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-13",
+      "area": "Authentication",
+      "title": "Refresh token issues a new working access token",
+      "expected": "200 + token works",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-14",
+      "area": "Authentication",
+      "title": "Access token cannot be used as a refresh token",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-15",
+      "area": "Authentication",
+      "title": "Refresh token cannot be used as a bearer token",
+      "expected": "401",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-16",
+      "area": "Authentication",
+      "title": "Public registration with an existing e-mail is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "Email already registered."
+    },
+    {
+      "id": "AUTH-17",
+      "area": "Authentication",
+      "title": "Super Admin bootstrap endpoint is closed once users exist",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Public registration is disabled. Contact your administrator."
+    },
+    {
+      "id": "AUTH-18",
+      "area": "Authentication",
+      "title": "Public registration ignores injected role / organization_id (privilege escalation check)",
+      "expected": "role USER, no org",
+      "actual": "USER, org=None",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-19",
+      "area": "Authentication",
+      "title": "Registration enforces a minimum password length",
+      "expected": "400/422",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Server accepted a 1-character password: no password policy on /auth/register-user"
+    },
+    {
+      "id": "AUTH-20",
+      "area": "Authentication",
+      "title": "Change password: wrong current password is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "Current password is incorrect."
+    },
+    {
+      "id": "AUTH-21",
+      "area": "Authentication",
+      "title": "Change password: confirmation mismatch is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "New passwords do not match."
+    },
+    {
+      "id": "AUTH-22",
+      "area": "Authentication",
+      "title": "Change password: password shorter than 8 characters is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "New password must be at least 8 characters long."
+    },
+    {
+      "id": "AUTH-23",
+      "area": "Authentication",
+      "title": "Change password: reusing the current password is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "New password must be different from the current password."
+    },
+    {
+      "id": "AUTH-24",
+      "area": "Authentication",
+      "title": "Change password: valid change succeeds",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": null
+    },
+    {
+      "id": "AUTH-25",
+      "area": "Authentication",
+      "title": "After password change: old password fails, new password works",
+      "expected": "401 then 200",
+      "actual": "401 then 200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-26",
+      "area": "Authentication",
+      "title": "Change password without a token is rejected",
+      "expected": "401/403",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUTH-29",
+      "area": "Authentication",
+      "title": "15 consecutive wrong passwords trigger throttling / lock-out (429/423)",
+      "expected": "429 or 423 at some point",
+      "actual": "[401]",
+      "status": "FAIL",
+      "note": "No rate limiting or lock-out: unlimited password guessing is possible"
+    },
+    {
+      "id": "AUTH-30",
+      "area": "Authentication",
+      "title": "Login error does not reveal whether the e-mail exists (no user enumeration)",
+      "expected": "same message for unknown e-mail and wrong password",
+      "actual": "'Invalid Email' vs 'Invalid Password'",
+      "status": "FAIL",
+      "note": "Messages differ ('Invalid Email' vs 'Invalid Password'), which lets an attacker discover valid accounts"
+    },
+    {
+      "id": "AUTH-27",
+      "area": "Authentication",
+      "title": "Logout endpoint responds successfully",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": "Logout successful. Remove JWT from client."
+    },
+    {
+      "id": "AUTH-28",
+      "area": "Authentication",
+      "title": "Access token is invalidated server-side after logout",
+      "expected": "401",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Token still valid after logout: logout is client-side only (token is not revoked)"
+    },
+    {
+      "id": "RBAC-01",
+      "area": "Role-based access",
+      "title": "GET /admin/all-users - access per role",
+      "expected": "super:200, subA:403, empA:403, user:403",
+      "actual": "super:200, subA:403, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-02",
+      "area": "Role-based access",
+      "title": "GET /admin/statistics - access per role",
+      "expected": "super:200, subA:403, empA:403, user:403",
+      "actual": "super:200, subA:403, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-03",
+      "area": "Role-based access",
+      "title": "GET /admin/dashboard - access per role",
+      "expected": "super:200, subA:403, empA:403, user:403",
+      "actual": "super:200, subA:403, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-04",
+      "area": "Role-based access",
+      "title": "GET /organizations/deactivation-requests - access per role",
+      "expected": "super:200, subA:403, empA:403, user:403",
+      "actual": "super:200, subA:403, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-05",
+      "area": "Role-based access",
+      "title": "GET /organizations/users - access per role",
+      "expected": "super:403, subA:200, empA:403, user:403",
+      "actual": "super:403, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-06",
+      "area": "Role-based access",
+      "title": "GET /analytics/role/activity-summary - access per role",
+      "expected": "super:200, subA:200, empA:403, user:403",
+      "actual": "super:200, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-07",
+      "area": "Role-based access",
+      "title": "GET /analytics/role/websites - access per role",
+      "expected": "super:200, subA:200, empA:403, user:403",
+      "actual": "super:200, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-08",
+      "area": "Role-based access",
+      "title": "GET /analytics/role/categories - access per role",
+      "expected": "super:200, subA:200, empA:403, user:403",
+      "actual": "super:200, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-09",
+      "area": "Role-based access",
+      "title": "GET /analytics/role/tab-switches - access per role",
+      "expected": "super:200, subA:200, empA:403, user:403",
+      "actual": "super:200, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-10",
+      "area": "Role-based access",
+      "title": "GET /analytics/role/report - access per role",
+      "expected": "super:200, subA:200, empA:403, user:403",
+      "actual": "super:200, subA:200, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-11",
+      "area": "Role-based access",
+      "title": "GET /ai/organization-recommendation - access per role",
+      "expected": "super:200, subA:403, empA:403, user:403",
+      "actual": "super:200, subA:403, empA:403, user:403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-12",
+      "area": "Role-based access",
+      "title": "GET /users/me - access per role",
+      "expected": "super:200, subA:200, empA:200, user:200",
+      "actual": "super:200, subA:200, empA:200, user:200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-13",
+      "area": "Role-based access",
+      "title": "GET /analytics/summary - access per role",
+      "expected": "super:200, subA:200, empA:200, user:200",
+      "actual": "super:200, subA:200, empA:200, user:200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-14",
+      "area": "Role-based access",
+      "title": "GET /notifications/ - access per role",
+      "expected": "super:200, subA:200, empA:200, user:200",
+      "actual": "super:200, subA:200, empA:200, user:200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-15",
+      "area": "Role-based access",
+      "title": "Employee should NOT be able to list all organisations",
+      "expected": "403",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Employee received 4 organisations incl. other tenants' names"
+    },
+    {
+      "id": "RBAC-16",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot create organisation",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-17",
+      "area": "Role-based access",
+      "title": "Employee cannot create organisation",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-18",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot invite a Sub Admin",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-19",
+      "area": "Role-based access",
+      "title": "Employee cannot invite a Sub Admin",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-20",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot change roles",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-21",
+      "area": "Role-based access",
+      "title": "Employee cannot change roles (self-promotion)",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-22",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot delete users",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-23",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot assign organisations",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-24",
+      "area": "Role-based access",
+      "title": "Super Admin cannot create org users (Sub Admin only)",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-25",
+      "area": "Role-based access",
+      "title": "Employee cannot create org users",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-26",
+      "area": "Role-based access",
+      "title": "Employee cannot request organisation deactivation",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-27",
+      "area": "Role-based access",
+      "title": "Super Admin cannot file a deactivation request (Sub Admin only)",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-28",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot approve a deactivation request",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-29",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot reject a deactivation request",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-30",
+      "area": "Role-based access",
+      "title": "Sub Admin cannot (re)activate an organisation",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-31",
+      "area": "Role-based access",
+      "title": "Employee cannot view another employee's analytics",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RBAC-32",
+      "area": "Role-based access",
+      "title": "Employee cannot read a colleague's live status",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-01",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha sees only Alpha employees in user list",
+      "expected": "Alpha employees only",
+      "actual": "['demo.employee2@example.com', 'demo.employee@example.com']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-02",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Beta sees only Beta employees",
+      "expected": "Beta employees only",
+      "actual": "['demo.employee.beta@example.com']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-03",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Own-org employee: activity summary",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-04",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Own-org employee: websites",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-05",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Own-org employee: categories",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-06",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Own-org employee: tab switches",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-07",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Own-org employee: live status",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-08",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Other-org employee: activity summary is blocked",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-09",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Other-org employee: websites is blocked",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-10",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Other-org employee: live status is blocked",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-11",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Standalone user (no org): analytics blocked",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-12",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha - Unknown user id returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-13",
+      "area": "Sub Admin scope",
+      "title": "Super Admin can view any employee's analytics (Beta employee)",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-14",
+      "area": "Sub Admin scope",
+      "title": "Org-wide analytics are scoped: Alpha + Beta totals do not exceed the Super Admin total",
+      "expected": "browser_time_seconds: Alpha 14280 + Beta 7140 <= Super 28560",
+      "actual": "14280 + 7140 vs 28560",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-15",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin creates an employee (role injection ignored)",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-16",
+      "area": "Sub Admin scope",
+      "title": "New employee is USER, belongs to the Sub Admin's organisation",
+      "expected": "USER, org of Sub Admin",
+      "actual": "USER, org=2",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-17",
+      "area": "Sub Admin scope",
+      "title": "New employee receives a welcome notification",
+      "expected": ">=1 notification",
+      "actual": "1",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-18",
+      "area": "Sub Admin scope",
+      "title": "Creating an employee with a duplicate e-mail is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-19",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin cannot create an employee with a 1-character password",
+      "expected": "400/422",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Server accepted a 1-character password for an organisation user"
+    },
+    {
+      "id": "SUB-20",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin Alpha cannot deactivate a Beta employee",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "User belongs to another organization."
+    },
+    {
+      "id": "SUB-21",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin cannot deactivate another Sub Admin",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Cannot deactivate another Sub Admin."
+    },
+    {
+      "id": "SUB-22",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin cannot deactivate a Super Admin",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Cannot deactivate Super Admin."
+    },
+    {
+      "id": "SUB-23",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin cannot deactivate a standalone user (no organisation)",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "User belongs to another organization."
+    },
+    {
+      "id": "SUB-24",
+      "area": "Sub Admin scope",
+      "title": "Deactivating an unknown user returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-25",
+      "area": "Sub Admin scope",
+      "title": "Employee cannot deactivate a colleague",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-26",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin deactivates an own-org employee",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-27",
+      "area": "Sub Admin scope",
+      "title": "Deactivated employee can no longer log in",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Your account has been deactivated."
+    },
+    {
+      "id": "SUB-28",
+      "area": "Sub Admin scope",
+      "title": "Deactivated employee's already-issued token stops working",
+      "expected": "401/403",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Deactivation only blocks new logins; a token issued before deactivation keeps working until it expires"
+    },
+    {
+      "id": "SUB-28b",
+      "area": "Sub Admin scope",
+      "title": "Deactivated employee cannot mint a fresh access token with the refresh token (valid 7 days)",
+      "expected": "401/403",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Refresh endpoint does not check is_active, so a deactivated user keeps access for up to 7 days"
+    },
+    {
+      "id": "SUB-29",
+      "area": "Sub Admin scope",
+      "title": "A deactivated employee can be re-activated",
+      "expected": "200",
+      "actual": "404",
+      "status": "FAIL",
+      "note": "No re-activation endpoint exists for users (only organisations can be re-activated)"
+    },
+    {
+      "id": "SUB-30",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin without an organisation: user list returns 400",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUB-31",
+      "area": "Sub Admin scope",
+      "title": "Sub Admin without an organisation: deactivation request returns 400",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-01",
+      "area": "Invitations",
+      "title": "Invite answers 200; if e-mail cannot be sent it says why and returns the link to share by hand",
+      "expected": "200 + (email_sent true) or (email_sent false + reason + link)",
+      "actual": "200 email_sent=False link=yes reason=E-mail is not configured on the server. Set EMAIL_",
+      "status": "PASS",
+      "note": "Mail server is not configured in .env, so the Super Admin gets the link instead"
+    },
+    {
+      "id": "INV-01b",
+      "area": "Invitations",
+      "title": "The fallback link returned by the API can be used to accept the invitation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-01c",
+      "area": "Invitations",
+      "title": "Super Admin gets an in-app notification about the invitation (sent / not delivered)",
+      "expected": "INVITATION_SENT or INVITATION_FAILED",
+      "actual": "['INVITATION_ACCEPTED', 'INVITATION_FAILED', 'ORGANIZATION_CREATED']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-02",
+      "area": "Invitations",
+      "title": "Invite for unknown organisation returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-03",
+      "area": "Invitations",
+      "title": "Invite for an e-mail that already has an account returns 400",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-04",
+      "area": "Invitations",
+      "title": "Invite with malformed e-mail returns 422",
+      "expected": "422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-05",
+      "area": "Invitations",
+      "title": "Accepting an invitation with a 5-character password is rejected by the server",
+      "expected": "400/422",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Only the UI checks length (min 8); the API accepted it"
+    },
+    {
+      "id": "INV-06",
+      "area": "Invitations",
+      "title": "Valid invitation creates a Sub Admin in the invited organisation",
+      "expected": "200, SUB_ADMIN, org",
+      "actual": "200 {'message': 'Invitation Accepted Successfully.', 'role': 'SUB_ADMIN', 'organization_id': 35, 'organization_name': 'qa-tmp-b5b6d1-inv-org'}",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-07",
+      "area": "Invitations",
+      "title": "Invited Sub Admin can log in and has correct role/org",
+      "expected": "SUB_ADMIN, org",
+      "actual": "SUB_ADMIN, org=35",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-08",
+      "area": "Invitations",
+      "title": "Re-using the same invitation link is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": "User already exists."
+    },
+    {
+      "id": "INV-09",
+      "area": "Invitations",
+      "title": "Garbage invitation token is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-10",
+      "area": "Invitations",
+      "title": "Expired invitation (older than 24 h) is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-11",
+      "area": "Invitations",
+      "title": "Login access token cannot be used as an invitation",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-12",
+      "area": "Invitations",
+      "title": "Invitation carrying role SUPER_ADMIN is refused",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-13",
+      "area": "Invitations",
+      "title": "Tampered invitation payload is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-14",
+      "area": "Invitations",
+      "title": "Invitation without an organisation is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-15",
+      "area": "Invitations",
+      "title": "Invitation for a non-existent organisation returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-16",
+      "area": "Invitations",
+      "title": "Accept-invitation request without a body returns 422",
+      "expected": "422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "INV-17",
+      "area": "Invitations",
+      "title": "Invitation link format matches the front-end router (hash route)",
+      "expected": "http://localhost:5173/#/accept-invitation?token=...",
+      "actual": "same (hash route + HashRouter)",
+      "status": "PASS",
+      "note": "Link is hard-coded to localhost:5173; it must be changed before deployment"
+    },
+    {
+      "id": "ORG-01",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin creates an organisation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-02",
+      "area": "Organisation lifecycle",
+      "title": "Duplicate organisation name is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-03",
+      "area": "Organisation lifecycle",
+      "title": "New organisation is active by default",
+      "expected": "is_active true",
+      "actual": "True",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-04",
+      "area": "Organisation lifecycle",
+      "title": "Assign: non-Sub-Admin user is refused",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-05",
+      "area": "Organisation lifecycle",
+      "title": "Assign: unknown user returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-06",
+      "area": "Organisation lifecycle",
+      "title": "Assign: unknown organisation returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-07",
+      "area": "Organisation lifecycle",
+      "title": "Assign: Sub Admin without org gets an organisation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-08",
+      "area": "Organisation lifecycle",
+      "title": "Assigned Sub Admin now sees the organisation's employees",
+      "expected": "Life employee listed",
+      "actual": "['qa-tmp-b5b6d1-lifeemp@example.com']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-09",
+      "area": "Organisation lifecycle",
+      "title": "Assigned Sub Admin receives an 'Organization Assigned' notification",
+      "expected": "notification present",
+      "actual": "['Organization Assigned']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-10",
+      "area": "Organisation lifecycle",
+      "title": "Sub Admin submits a deactivation request",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-11",
+      "area": "Organisation lifecycle",
+      "title": "Second pending request for the same organisation is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-12",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin sees the pending request",
+      "expected": "request listed as PENDING",
+      "actual": "PENDING",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-13",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin is notified of the request",
+      "expected": "DEACTIVATION_REQUEST notification",
+      "actual": "found",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-14",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin rejects the request",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-15",
+      "area": "Organisation lifecycle",
+      "title": "After rejection the organisation still works (employee login)",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-16",
+      "area": "Organisation lifecycle",
+      "title": "After rejection a new request may be filed",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-17",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin approves the request",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-18",
+      "area": "Organisation lifecycle",
+      "title": "Employee of a deactivated organisation cannot log in",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Your organization has been deactivated. Please contact the Super Admin."
+    },
+    {
+      "id": "ORG-19",
+      "area": "Organisation lifecycle",
+      "title": "Sub Admin of a deactivated organisation cannot log in",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": "Your organization has been deactivated. Please contact the Super Admin."
+    },
+    {
+      "id": "ORG-20",
+      "area": "Organisation lifecycle",
+      "title": "Token issued before deactivation stops working",
+      "expected": "401/403",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Existing sessions of a deactivated organisation stay valid until the token expires (60 min)"
+    },
+    {
+      "id": "ORG-21",
+      "area": "Organisation lifecycle",
+      "title": "Cannot invite a Sub Admin into an inactive organisation",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-22",
+      "area": "Organisation lifecycle",
+      "title": "Pending invitation cannot be accepted after the organisation is deactivated",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-23",
+      "area": "Organisation lifecycle",
+      "title": "An already-approved request cannot be approved again",
+      "expected": "400",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Request status is not checked: approved/rejected requests can be re-processed (and re-notify)"
+    },
+    {
+      "id": "ORG-24",
+      "area": "Organisation lifecycle",
+      "title": "Unknown request id returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-25",
+      "area": "Organisation lifecycle",
+      "title": "Super Admin re-activates the organisation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-26",
+      "area": "Organisation lifecycle",
+      "title": "Employee can log in again after re-activation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-27",
+      "area": "Organisation lifecycle",
+      "title": "Sub Admin can log in again after re-activation",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ORG-28",
+      "area": "Organisation lifecycle",
+      "title": "Activating an unknown organisation returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MGT-01",
+      "area": "Super Admin user management",
+      "title": "All-users list contains demo accounts of every role",
+      "expected": ">=6 users, all 3 roles",
+      "actual": "23 users, roles=['SUB_ADMIN', 'SUPER_ADMIN', 'USER']",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MGT-02",
+      "area": "Super Admin user management",
+      "title": "All-users response does not leak password hashes",
+      "expected": "no hashed_password field",
+      "actual": "field present",
+      "status": "FAIL",
+      "note": "bcrypt hashes of every user are returned to the Super Admin"
+    },
+    {
+      "id": "MGT-03",
+      "area": "Super Admin user management",
+      "title": "Statistics totals add up",
+      "expected": "total = super + sub + users",
+      "actual": "{'Total Users': 23, 'Super Admins': 2, 'Sub Admins': 8, 'Users': 13}",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MGT-04",
+      "area": "Super Admin user management",
+      "title": "Super Admin changes a user's role",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MGT-05",
+      "area": "Super Admin user management",
+      "title": "Change-role rejects values that are not a valid role",
+      "expected": "400/422",
+      "actual": "200",
+      "status": "FAIL",
+      "note": "Role 'HACKER' was saved; that user can no longer open any dashboard"
+    },
+    {
+      "id": "MGT-06",
+      "area": "Super Admin user management",
+      "title": "Change role of unknown user returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MGT-07",
+      "area": "Super Admin user management",
+      "title": "Super Admin can delete a user who already has activity history",
+      "expected": "200",
+      "actual": "500",
+      "status": "FAIL",
+      "note": "Server error (500): user rows referenced by activity/notification rows cannot be deleted (foreign key)"
+    },
+    {
+      "id": "MGT-09",
+      "area": "Super Admin user management",
+      "title": "Super Admin can delete a user who only has a welcome notification (no activity)",
+      "expected": "200",
+      "actual": "500",
+      "status": "FAIL",
+      "note": "Every employee created by a Sub Admin receives a notification, so none of them can be deleted (500)"
+    },
+    {
+      "id": "MGT-08",
+      "area": "Super Admin user management",
+      "title": "Delete unknown user returns 404",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-01",
+      "area": "Employee / user features",
+      "title": "Profile shows own details",
+      "expected": "e-mail matches",
+      "actual": "demo.employee@example.com",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-02",
+      "area": "Employee / user features",
+      "title": "Employee opens: Dashboard data",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-03",
+      "area": "Employee / user features",
+      "title": "Employee opens: Activity summary",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-04",
+      "area": "Employee / user features",
+      "title": "Employee opens: Website analytics",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-05",
+      "area": "Employee / user features",
+      "title": "Employee opens: Category analytics",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-06",
+      "area": "Employee / user features",
+      "title": "Employee opens: Tab-switch analytics",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-07",
+      "area": "Employee / user features",
+      "title": "Employee opens: Weekly report",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-08",
+      "area": "Employee / user features",
+      "title": "Employee opens: Monthly report",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-09",
+      "area": "Employee / user features",
+      "title": "Employee opens: Current activity",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-10",
+      "area": "Employee / user features",
+      "title": "Employee opens: Activity history",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-11",
+      "area": "Employee / user features",
+      "title": "Employee opens: Live status",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-12",
+      "area": "Employee / user features",
+      "title": "Employee opens: Planner categories",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-14",
+      "area": "Employee / user features",
+      "title": "Employee opens: Notification unread count",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-15",
+      "area": "Employee / user features",
+      "title": "Report with invalid type returns 400",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-16",
+      "area": "Employee / user features",
+      "title": "Activity tracking: start",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-17",
+      "area": "Employee / user features",
+      "title": "Activity tracking: end stores a duration",
+      "expected": "200 with duration >= 1",
+      "actual": "200 {'message': 'Activity Updated', 'duration_seconds': 1}",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-18",
+      "area": "Employee / user features",
+      "title": "A user cannot end another user's activity",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-19",
+      "area": "Employee / user features",
+      "title": "Tab switch is recorded",
+      "expected": "200 or 201",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-20",
+      "area": "Employee / user features",
+      "title": "Status update (ACTIVE/IDLE) accepted",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-21",
+      "area": "Employee / user features",
+      "title": "Planner: create focus plan",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-22",
+      "area": "Employee / user features",
+      "title": "Planner: second plan for the same date is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-23",
+      "area": "Employee / user features",
+      "title": "Planner: update own plan",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-24",
+      "area": "Employee / user features",
+      "title": "Planner: another user cannot edit this plan",
+      "expected": "403 or 404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-25",
+      "area": "Employee / user features",
+      "title": "Planner: 'today' with no plan returns a clear 404",
+      "expected": "404 'No focus plan found for today.'",
+      "actual": "404 No focus plan found for today.",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-13",
+      "area": "Employee / user features",
+      "title": "Planner: create a plan for today",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-32",
+      "area": "Employee / user features",
+      "title": "Planner: today's plan is returned",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-33",
+      "area": "Employee / user features",
+      "title": "Planner: progress is returned",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-34",
+      "area": "Employee / user features",
+      "title": "Planner: current session responds",
+      "expected": "200 or 404",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-35",
+      "area": "Employee / user features",
+      "title": "Planner: live status responds",
+      "expected": "200 or 404",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-26",
+      "area": "Employee / user features",
+      "title": "Notifications list and unread counter respond",
+      "expected": "list + count",
+      "actual": "1 items, count={'unread_count': 1}",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-27",
+      "area": "Employee / user features",
+      "title": "Another user cannot mark my notification as read",
+      "expected": "404",
+      "actual": "404",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-28",
+      "area": "Employee / user features",
+      "title": "Owner marks notification as read",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-29",
+      "area": "Employee / user features",
+      "title": "Mark all notifications as read",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-30",
+      "area": "Employee / user features",
+      "title": "AI chat: blank message is rejected",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "USR-31",
+      "area": "Employee / user features",
+      "title": "AI recommendation endpoint responds (depends on Groq/Gemini keys)",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "note": "3.0s"
+    },
+    {
+      "id": "TAB-01",
+      "area": "Tab switching",
+      "title": "New user starts with 0 recorded tab switches",
+      "expected": "0",
+      "actual": "0",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-02",
+      "area": "Tab switching",
+      "title": "A tab switch is saved",
+      "expected": "200, duplicate false",
+      "actual": "200 {'message': 'Tab Switch Saved', 'id': 456, 'duplicate': False}",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-03",
+      "area": "Tab switching",
+      "title": "The same switch reported again within a second is counted once",
+      "expected": "duplicate true, total 1",
+      "actual": "True, total 1",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-04",
+      "area": "Tab switching",
+      "title": "The same switch a moment later is a new, real switch",
+      "expected": "total 2",
+      "actual": "2",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-05",
+      "area": "Tab switching",
+      "title": "Website names are trimmed before saving",
+      "expected": "'youtube.com'",
+      "actual": "'youtube.com'",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-06",
+      "area": "Tab switching",
+      "title": "Empty website name is rejected",
+      "expected": "400 or 422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-07",
+      "area": "Tab switching",
+      "title": "Blank (spaces only) website name is rejected",
+      "expected": "400 or 422",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-08",
+      "area": "Tab switching",
+      "title": "Website name longer than 255 characters is rejected",
+      "expected": "400 or 422",
+      "actual": "422",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-09",
+      "area": "Tab switching",
+      "title": "Tab switch without login is refused",
+      "expected": "401 or 403",
+      "actual": "401",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-10",
+      "area": "Tab switching",
+      "title": "Summary screen and Tab Switch screen show the same number",
+      "expected": "summary 3 = list 3",
+      "actual": "summary 3, list 3",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-11",
+      "area": "Tab switching",
+      "title": "Another user's switches are not mixed in",
+      "expected": "different totals",
+      "actual": "mine 3, other 35",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-12",
+      "area": "Tab switching",
+      "title": "Date filter returns today's switches",
+      "expected": "3",
+      "actual": "3",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-13",
+      "area": "Tab switching",
+      "title": "Date filter with a bad date returns 400",
+      "expected": "400",
+      "actual": "400",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-14",
+      "area": "Tab switching",
+      "title": "Sub Admin sees the tab switches of an own-organisation employee",
+      "expected": "list with entries",
+      "actual": "35",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-15",
+      "area": "Tab switching",
+      "title": "Sub Admin cannot see tab switches of another organisation's employee",
+      "expected": "403",
+      "actual": "403",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TAB-16",
+      "area": "Tab switching",
+      "title": "Dashboard 'today' counter matches the recorded switches",
+      "expected": "3",
+      "actual": "3",
+      "status": "PASS",
+      "note": ""
+    }
+  ],
+  "cleanup": [
+    "DELETE 2",
+    "DELETE 1",
+    "DELETE 1",
+    "DELETE 1",
+    "DELETE 3",
+    "DELETE 0",
+    "DELETE 0",
+    "DELETE 15",
+    "DELETE 14",
+    "DELETE 2"
+  ]
+}

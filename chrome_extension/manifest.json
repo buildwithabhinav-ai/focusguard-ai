@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "FocusGuard AI",
+  "version": "1.0.0",
+  "description": "FocusGuard AI - Human Attention Preservation and Digital Distraction Intelligence Platform.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "idle",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*",
+    "https://focusguard-ai-backend.onrender.com/*"
+  ],
+  "action": {
+    "default_title": "FocusGuard AI",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

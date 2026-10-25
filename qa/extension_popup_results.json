@@ -1,0 +1,69 @@
+{
+  "total": 7,
+  "passed": 7,
+  "results": [
+    {
+      "id": "POPUP-01",
+      "title": "Signed in on the New Tab page: success, tracking waits for a website",
+      "expected": "see test",
+      "actual": "{\"ok\":true,\"tracking\":false,\"reason\":\"internal_page\",\"error\":null}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-02",
+      "title": "Signed in on a chrome:// page: success, tracking waits for a website",
+      "expected": "see test",
+      "actual": "{\"ok\":true,\"tracking\":false,\"reason\":\"internal_page\",\"error\":null}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-03",
+      "title": "No tab found at all: success, tracking waits for a website",
+      "expected": "see test",
+      "actual": "{\"ok\":true,\"tracking\":false,\"reason\":\"no_tab\",\"error\":null}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-04",
+      "title": "Signed in on a normal website: tracking starts",
+      "expected": "see test",
+      "actual": "{\"ok\":true,\"tracking\":true,\"reason\":\"tracking\",\"error\":null}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-05",
+      "title": "Backend not running: clear message naming the address",
+      "expected": "see test",
+      "actual": "{\"ok\":false,\"tracking\":false,\"reason\":\"start_failed\",\"error\":\"Cannot reach the server at http://127.0.0.1:8000. Is the backend running?\"}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-06",
+      "title": "Rejected token: error shows the server's reason",
+      "expected": "see test",
+      "actual": "{\"ok\":false,\"tracking\":false,\"reason\":\"start_failed\",\"error\":\"401: Invalid refresh token.\"}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "POPUP-07",
+      "title": "Not signed in: asks to sign in",
+      "expected": "see test",
+      "actual": "{\"ok\":false,\"tracking\":false,\"reason\":\"not_logged_in\",\"error\":\"Please sign in first.\"}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    }
+  ]
+}

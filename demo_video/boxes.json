@@ -1,0 +1,4160 @@
+{
+ "login": [
+  {
+   "tag": "H1",
+   "text": "Welcome Back",
+   "x": 529,
+   "y": 224,
+   "w": 382,
+   "h": 40
+  },
+  {
+   "tag": "A",
+   "text": "Forgot Password?",
+   "x": 793,
+   "y": 540,
+   "w": 118,
+   "h": 20
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Login",
+   "x": 529,
+   "y": 584,
+   "w": 382,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Register",
+   "x": 771,
+   "y": 658,
+   "w": 55,
+   "h": 16
+  }
+ ],
+ "landing": [
+  {
+   "tag": "A",
+   "text": "F\nFocusGuard AI",
+   "x": 112,
+   "y": 16,
+   "w": 174,
+   "h": 36
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Features",
+   "x": 453,
+   "y": 24,
+   "w": 57,
+   "h": 20
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Solutions",
+   "x": 534,
+   "y": 24,
+   "w": 61,
+   "h": 20
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Pricing",
+   "x": 619,
+   "y": 24,
+   "w": 45,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "About",
+   "x": 688,
+   "y": 24,
+   "w": 39,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "Login",
+   "x": 1145,
+   "y": 14,
+   "w": 67,
+   "h": 40
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 1220,
+   "y": 14,
+   "w": 108,
+   "h": 40
+  },
+  {
+   "tag": "H1",
+   "text": "Protect Your\nAttention.\nWork Smarter.",
+   "x": 112,
+   "y": 221,
+   "w": 576,
+   "h": 233
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 112,
+   "y": 607,
+   "w": 142,
+   "h": 50
+  },
+  {
+   "tag": "A",
+   "text": "Watch Demo",
+   "x": 266,
+   "y": 607,
+   "w": 152,
+   "h": 50
+  },
+  {
+   "tag": "H2",
+   "text": "Everything You Need To Stay Focused",
+   "x": 336,
+   "y": 1029,
+   "w": 768,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Smart Focus Planner",
+   "x": 137,
+   "y": 1362,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "AI Recommendations",
+   "x": 550,
+   "y": 1362,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Website Tracking",
+   "x": 964,
+   "y": 1362,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Advanced Analytics",
+   "x": 137,
+   "y": 1600,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Organization Dashboard",
+   "x": 550,
+   "y": 1600,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Smart Notifications",
+   "x": 964,
+   "y": 1600,
+   "w": 339,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Built For Every Level Of Your Organization",
+   "x": 336,
+   "y": 1977,
+   "w": 768,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Work with more focus",
+   "x": 141,
+   "y": 2342,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 141,
+   "y": 2690,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Manage your team effectively",
+   "x": 554,
+   "y": 2342,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 554,
+   "y": 2690,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Manage the entire platform",
+   "x": 968,
+   "y": 2342,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 968,
+   "y": 2690,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "H2",
+   "text": "Choose The Right Experience For Your Team",
+   "x": 336,
+   "y": 2991,
+   "w": 768,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Individual",
+   "x": 141,
+   "y": 3328,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 141,
+   "y": 3744,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Team",
+   "x": 554,
+   "y": 3328,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Get Started",
+   "x": 554,
+   "y": 3744,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Enterprise",
+   "x": 968,
+   "y": 3328,
+   "w": 331,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Contact Us",
+   "x": 968,
+   "y": 3744,
+   "w": 331,
+   "h": 44
+  },
+  {
+   "tag": "A",
+   "text": "Talk to our team",
+   "x": 659,
+   "y": 3962,
+   "w": 122,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "How FocusGuard AI Works",
+   "x": 336,
+   "y": 4239,
+   "w": 768,
+   "h": 48
+  },
+  {
+   "tag": "H3",
+   "text": "Track Activity",
+   "x": 137,
+   "y": 4488,
+   "w": 236,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Analyze Behaviour",
+   "x": 447,
+   "y": 4488,
+   "w": 236,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Generate AI Insights",
+   "x": 757,
+   "y": 4488,
+   "w": 236,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Stay Focused",
+   "x": 1067,
+   "y": 4488,
+   "w": 236,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Personalized\nAI Recommendations",
+   "x": 112,
+   "y": 4948,
+   "w": 576,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Adaptive AI Recommendations",
+   "x": 168,
+   "y": 5216,
+   "w": 227,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Focus Score Improvement",
+   "x": 168,
+   "y": 5276,
+   "w": 193,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Behaviour Pattern Analysis",
+   "x": 168,
+   "y": 5336,
+   "w": 199,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Excellent work today!",
+   "x": 837,
+   "y": 4982,
+   "w": 405,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Automatic Website\nTracking",
+   "x": 752,
+   "y": 5671,
+   "w": 576,
+   "h": 120
+  },
+  {
+   "tag": "H2",
+   "text": "Visualize Your Productivity",
+   "x": 752,
+   "y": 6460,
+   "w": 576,
+   "h": 60
+  },
+  {
+   "tag": "H2",
+   "text": "Take Control of Your Attention",
+   "x": 336,
+   "y": 7211,
+   "w": 768,
+   "h": 60
+  },
+  {
+   "tag": "A",
+   "text": "Start Free",
+   "x": 586,
+   "y": 7419,
+   "w": 157,
+   "h": 50
+  },
+  {
+   "tag": "A",
+   "text": "Login",
+   "x": 755,
+   "y": 7419,
+   "w": 99,
+   "h": 50
+  },
+  {
+   "tag": "A",
+   "text": "F\nFocusGuard AI",
+   "x": 112,
+   "y": 7710,
+   "w": 174,
+   "h": 36
+  },
+  {
+   "tag": "A",
+   "text": "GH",
+   "x": 112,
+   "y": 7892,
+   "w": 36,
+   "h": 36
+  },
+  {
+   "tag": "A",
+   "text": "in",
+   "x": 156,
+   "y": 7892,
+   "w": 36,
+   "h": 36
+  },
+  {
+   "tag": "A",
+   "text": "X",
+   "x": 200,
+   "y": 7892,
+   "w": 36,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "PRODUCT",
+   "x": 611,
+   "y": 7710,
+   "w": 218,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "Focus Planner",
+   "x": 611,
+   "y": 7750,
+   "w": 93,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 611,
+   "y": 7786,
+   "w": 61,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Notifications",
+   "x": 611,
+   "y": 7822,
+   "w": 83,
+   "h": 16
+  },
+  {
+   "tag": "H3",
+   "text": "SOLUTIONS",
+   "x": 861,
+   "y": 7710,
+   "w": 218,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "Individuals",
+   "x": 861,
+   "y": 7750,
+   "w": 69,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Teams",
+   "x": 861,
+   "y": 7786,
+   "w": 43,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Organizations",
+   "x": 861,
+   "y": 7822,
+   "w": 90,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Administrators",
+   "x": 861,
+   "y": 7858,
+   "w": 95,
+   "h": 16
+  },
+  {
+   "tag": "H3",
+   "text": "COMPANY",
+   "x": 1110,
+   "y": 7710,
+   "w": 218,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "About Us",
+   "x": 1110,
+   "y": 7750,
+   "w": 60,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Contact",
+   "x": 1110,
+   "y": 7786,
+   "w": 52,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Privacy Policy",
+   "x": 1110,
+   "y": 7822,
+   "w": 91,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Terms of Service",
+   "x": 1110,
+   "y": 7858,
+   "w": 109,
+   "h": 16
+  },
+  {
+   "tag": "A",
+   "text": "Privacy",
+   "x": 1147,
+   "y": 8160,
+   "w": 48,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "Terms",
+   "x": 1215,
+   "y": 8160,
+   "w": 39,
+   "h": 20
+  },
+  {
+   "tag": "A",
+   "text": "Security",
+   "x": 1274,
+   "y": 8160,
+   "w": 54,
+   "h": 20
+  }
+ ],
+ "emp_dashboard": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1436,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Demo Employee Alpha One",
+   "x": 326,
+   "y": 172,
+   "w": 452,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "70%",
+   "x": 319,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "1h 59m",
+   "x": 606,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "1h 23m",
+   "x": 892,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "5",
+   "x": 1179,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Today's Planner",
+   "x": 319,
+   "y": 561,
+   "w": 687,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Development",
+   "x": 319,
+   "y": 638,
+   "w": 154,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Learning",
+   "x": 319,
+   "y": 735,
+   "w": 159,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 319,
+   "y": 832,
+   "w": 162,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "Current Session",
+   "x": 1088,
+   "y": 561,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 1088,
+   "y": 662,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "91.83 mins",
+   "x": 1088,
+   "y": 738,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Live Focus Status",
+   "x": 319,
+   "y": 962,
+   "w": 495,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "OFF TRACK",
+   "x": 371,
+   "y": 1055,
+   "w": 398,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 351,
+   "y": 1167,
+   "w": 117,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Social Media",
+   "x": 351,
+   "y": 1239,
+   "w": 112,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Instagram",
+   "x": 351,
+   "y": 1307,
+   "w": 104,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "AI Recommendation",
+   "x": 968,
+   "y": 964,
+   "w": 212,
+   "h": 28
+  }
+ ],
+ "emp_planner": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1336,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Focus Planner",
+   "x": 410,
+   "y": 136,
+   "w": 413,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Today's Planner",
+   "x": 319,
+   "y": 294,
+   "w": 176,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "300 mins",
+   "x": 837,
+   "y": 319,
+   "w": 88,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Development",
+   "x": 319,
+   "y": 408,
+   "w": 187,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Learning",
+   "x": 319,
+   "y": 513,
+   "w": 191,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 319,
+   "y": 618,
+   "w": 194,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "AI Recommendation",
+   "x": 315,
+   "y": 744,
+   "w": 698,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Planner Progress",
+   "x": 1079,
+   "y": 281,
+   "w": 316,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Current Session",
+   "x": 1083,
+   "y": 593,
+   "w": 308,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 1083,
+   "y": 694,
+   "w": 308,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "91.65 min",
+   "x": 1099,
+   "y": 826,
+   "w": 276,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Live Status",
+   "x": 1083,
+   "y": 952,
+   "w": 308,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 1083,
+   "y": 1129,
+   "w": 308,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Social Media",
+   "x": 1083,
+   "y": 1197,
+   "w": 308,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Instagram",
+   "x": 1083,
+   "y": 1265,
+   "w": 308,
+   "h": 24
+  }
+ ],
+ "emp_analytics": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 2036,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Analytics Dashboard",
+   "x": 402,
+   "y": 136,
+   "w": 435,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "Focus Score",
+   "x": 375,
+   "y": 289,
+   "w": 150,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "76.6%",
+   "x": 319,
+   "y": 361,
+   "w": 128,
+   "h": 48
+  },
+  {
+   "tag": "H2",
+   "text": "14h 2m",
+   "x": 319,
+   "y": 661,
+   "w": 219,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "10h 4m",
+   "x": 604,
+   "y": 661,
+   "w": 219,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "3h 58m",
+   "x": 888,
+   "y": 661,
+   "w": 219,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "35",
+   "x": 1173,
+   "y": 661,
+   "w": 219,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Activity Summary",
+   "x": 319,
+   "y": 771,
+   "w": 1072,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "10h 45m",
+   "x": 340,
+   "y": 905,
+   "w": 299,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "1h 27m",
+   "x": 705,
+   "y": 905,
+   "w": 299,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "76.64%",
+   "x": 1071,
+   "y": 905,
+   "w": 299,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Website Analytics",
+   "x": 319,
+   "y": 1036,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Github",
+   "x": 369,
+   "y": 1109,
+   "w": 51,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Youtube",
+   "x": 369,
+   "y": 1194,
+   "w": 61,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Stackoverflow",
+   "x": 369,
+   "y": 1279,
+   "w": 107,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Docs",
+   "x": 369,
+   "y": 1364,
+   "w": 51,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Mail",
+   "x": 369,
+   "y": 1449,
+   "w": 51,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Instagram",
+   "x": 369,
+   "y": 1534,
+   "w": 75,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "Category Analytics",
+   "x": 892,
+   "y": 1036,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Development",
+   "x": 942,
+   "y": 1109,
+   "w": 98,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 942,
+   "y": 1194,
+   "w": 114,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Social Media",
+   "x": 942,
+   "y": 1279,
+   "w": 95,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Entertainment",
+   "x": 942,
+   "y": 1364,
+   "w": 106,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Communication",
+   "x": 942,
+   "y": 1449,
+   "w": 117,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "Category Distribution",
+   "x": 319,
+   "y": 1648,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Website Usage",
+   "x": 892,
+   "y": 1648,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Tab Switch Analytics",
+   "x": 319,
+   "y": 2100,
+   "w": 225,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "github.com",
+   "x": 373,
+   "y": 2237,
+   "w": 111,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "gmail.com",
+   "x": 373,
+   "y": 2334,
+   "w": 87,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "youtube.com",
+   "x": 373,
+   "y": 2431,
+   "w": 96,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "stackoverflow.com",
+   "x": 373,
+   "y": 2528,
+   "w": 140,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "github.com",
+   "x": 373,
+   "y": 2625,
+   "w": 137,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "github.com",
+   "x": 373,
+   "y": 2722,
+   "w": 111,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "gmail.com",
+   "x": 373,
+   "y": 2819,
+   "w": 87,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "youtube.com",
+   "x": 373,
+   "y": 2916,
+   "w": 96,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "stackoverflow.com",
+   "x": 373,
+   "y": 3013,
+   "w": 140,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "github.com",
+   "x": 373,
+   "y": 3110,
+   "w": 137,
+   "h": 24
+  }
+ ],
+ "emp_reports": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1536,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Productivity Reports",
+   "x": 410,
+   "y": 136,
+   "w": 421,
+   "h": 45
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Report",
+   "x": 319,
+   "y": 294,
+   "w": 1072,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "10h 45m",
+   "x": 339,
+   "y": 415,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "1h 27m",
+   "x": 612,
+   "y": 415,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "12h 12m",
+   "x": 885,
+   "y": 415,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "88.13%",
+   "x": 1158,
+   "y": 415,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Report",
+   "x": 319,
+   "y": 1084,
+   "w": 1072,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "10h 45m",
+   "x": 339,
+   "y": 1205,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "1h 27m",
+   "x": 612,
+   "y": 1205,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "12h 12m",
+   "x": 885,
+   "y": 1205,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H3",
+   "text": "88.13%",
+   "x": 1158,
+   "y": 1205,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Activity",
+   "x": 319,
+   "y": 1497,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Activity",
+   "x": 892,
+   "y": 1497,
+   "w": 499,
+   "h": 28
+  }
+ ],
+ "emp_ai": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1336,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "AI Productivity Insights",
+   "x": 402,
+   "y": 128,
+   "w": 523,
+   "h": 45
+  }
+ ],
+ "emp_dashboard_dark": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1436,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "1",
+   "x": 1128,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Employee Alpha One",
+   "x": 1240,
+   "y": 18,
+   "w": 176,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Demo Employee Alpha One",
+   "x": 326,
+   "y": 172,
+   "w": 452,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "70%",
+   "x": 319,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "1h 59m",
+   "x": 606,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "1h 23m",
+   "x": 892,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "5",
+   "x": 1179,
+   "y": 443,
+   "w": 213,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Today's Planner",
+   "x": 319,
+   "y": 561,
+   "w": 687,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Development",
+   "x": 319,
+   "y": 638,
+   "w": 154,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Learning",
+   "x": 319,
+   "y": 735,
+   "w": 159,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 319,
+   "y": 832,
+   "w": 162,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "Current Session",
+   "x": 1088,
+   "y": 561,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 1088,
+   "y": 662,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "91.07 mins",
+   "x": 1088,
+   "y": 738,
+   "w": 303,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Live Focus Status",
+   "x": 319,
+   "y": 962,
+   "w": 495,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "OFF TRACK",
+   "x": 372,
+   "y": 1056,
+   "w": 398,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Documentation",
+   "x": 351,
+   "y": 1169,
+   "w": 117,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Social Media",
+   "x": 351,
+   "y": 1241,
+   "w": 112,
+   "h": 24
+  },
+  {
+   "tag": "H3",
+   "text": "Instagram",
+   "x": 351,
+   "y": 1309,
+   "w": 104,
+   "h": 24
+  }
+ ],
+ "sa_dashboard": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1536,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "5",
+   "x": 1179,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Super Admin",
+   "x": 1291,
+   "y": 18,
+   "w": 125,
+   "h": 20
+  },
+  {
+   "tag": "H2",
+   "text": "22h 49m",
+   "x": 319,
+   "y": 157,
+   "w": 156,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "48m",
+   "x": 605,
+   "y": 157,
+   "w": 156,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "7h 57m",
+   "x": 890,
+   "y": 157,
+   "w": 156,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "9",
+   "x": 1176,
+   "y": 157,
+   "w": 156,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Overall Weekly Activity",
+   "x": 377,
+   "y": 295,
+   "w": 227,
+   "h": 25
+  },
+  {
+   "tag": "H3",
+   "text": "91.2%",
+   "x": 736,
+   "y": 327,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Overall Monthly Activity",
+   "x": 954,
+   "y": 295,
+   "w": 237,
+   "h": 25
+  },
+  {
+   "tag": "H3",
+   "text": "91.2%",
+   "x": 1313,
+   "y": 327,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Today's Planner",
+   "x": 319,
+   "y": 806,
+   "w": 146,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Websites",
+   "x": 319,
+   "y": 1394,
+   "w": 211,
+   "h": 28
+  }
+ ],
+ "sa_org": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 2236,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "5",
+   "x": 1179,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Super Admin",
+   "x": 1291,
+   "y": 18,
+   "w": 125,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Organizations",
+   "x": 366,
+   "y": 104,
+   "w": 556,
+   "h": 40
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Create Organization",
+   "x": 1191,
+   "y": 142,
+   "w": 225,
+   "h": 48
+  },
+  {
+   "tag": "H2",
+   "text": "4",
+   "x": 319,
+   "y": 317,
+   "w": 126,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "4",
+   "x": 698,
+   "y": 317,
+   "w": 41,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "0",
+   "x": 1078,
+   "y": 317,
+   "w": 51,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "Invite Sub Admin",
+   "x": 375,
+   "y": 431,
+   "w": 381,
+   "h": 28
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Send Invitation",
+   "x": 319,
+   "y": 797,
+   "w": 177,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organizations",
+   "x": 307,
+   "y": 915,
+   "w": 164,
+   "h": 44
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 479,
+   "y": 915,
+   "w": 111,
+   "h": 44
+  },
+  {
+   "tag": "A",
+   "text": "Requests",
+   "x": 599,
+   "y": 915,
+   "w": 135,
+   "h": 44
+  },
+  {
+   "tag": "H2",
+   "text": "Acme Test Org",
+   "x": 391,
+   "y": 1029,
+   "w": 239,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Demo Corp Alpha",
+   "x": 772,
+   "y": 1029,
+   "w": 239,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Demo Corp Beta",
+   "x": 1152,
+   "y": 1029,
+   "w": 239,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Demo Corp Gamma",
+   "x": 391,
+   "y": 1264,
+   "w": 239,
+   "h": 28
+  }
+ ],
+ "sa_requests": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 2236,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "4",
+   "x": 1179,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Super Admin",
+   "x": 1291,
+   "y": 18,
+   "w": 125,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Organizations",
+   "x": 366,
+   "y": 104,
+   "w": 556,
+   "h": 40
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Create Organization",
+   "x": 1191,
+   "y": 142,
+   "w": 225,
+   "h": 48
+  },
+  {
+   "tag": "H2",
+   "text": "4",
+   "x": 319,
+   "y": 317,
+   "w": 126,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "4",
+   "x": 698,
+   "y": 317,
+   "w": 41,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "0",
+   "x": 1078,
+   "y": 317,
+   "w": 51,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "Invite Sub Admin",
+   "x": 375,
+   "y": 431,
+   "w": 381,
+   "h": 28
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Send Invitation",
+   "x": 319,
+   "y": 797,
+   "w": 177,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organizations",
+   "x": 307,
+   "y": 915,
+   "w": 164,
+   "h": 44
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 479,
+   "y": 915,
+   "w": 111,
+   "h": 44
+  },
+  {
+   "tag": "A",
+   "text": "Requests",
+   "x": 599,
+   "y": 915,
+   "w": 135,
+   "h": 44
+  },
+  {
+   "tag": "H2",
+   "text": "Organization #3",
+   "x": 375,
+   "y": 1029,
+   "w": 135,
+   "h": 28
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Approve",
+   "x": 319,
+   "y": 1267,
+   "w": 530,
+   "h": 44
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Reject",
+   "x": 861,
+   "y": 1267,
+   "w": 530,
+   "h": 44
+  },
+  {
+   "tag": "H2",
+   "text": "Organization #1",
+   "x": 375,
+   "y": 1381,
+   "w": 135,
+   "h": 28
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Approve",
+   "x": 319,
+   "y": 1619,
+   "w": 530,
+   "h": 44
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Reject",
+   "x": 861,
+   "y": 1619,
+   "w": 530,
+   "h": 44
+  }
+ ],
+ "sa_users": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1036,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "4",
+   "x": 1179,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Super Admin",
+   "x": 1291,
+   "y": 18,
+   "w": 125,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Users",
+   "x": 362,
+   "y": 104,
+   "w": 244,
+   "h": 36
+  },
+  {
+   "tag": "TH",
+   "text": "Name",
+   "x": 295,
+   "y": 326,
+   "w": 259,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Email",
+   "x": 554,
+   "y": 326,
+   "w": 293,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Role",
+   "x": 847,
+   "y": 326,
+   "w": 149,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Organization",
+   "x": 996,
+   "y": 326,
+   "w": 181,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Status",
+   "x": 1176,
+   "y": 326,
+   "w": 111,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Actions",
+   "x": 1287,
+   "y": 326,
+   "w": 128,
+   "h": 53
+  }
+ ],
+ "sa_analytics": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 2136,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "4",
+   "x": 1179,
+   "y": 19,
+   "w": 40,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Super Admin",
+   "x": 1291,
+   "y": 18,
+   "w": 125,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Analytics",
+   "x": 318,
+   "y": 128,
+   "w": 444,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "7h 57m",
+   "x": 319,
+   "y": 293,
+   "w": 105,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "96.61%",
+   "x": 604,
+   "y": 293,
+   "w": 96,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "22h 49m",
+   "x": 888,
+   "y": 293,
+   "w": 126,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "48m",
+   "x": 1173,
+   "y": 293,
+   "w": 64,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Organization Activity",
+   "x": 377,
+   "y": 403,
+   "w": 239,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "91.2%",
+   "x": 740,
+   "y": 435,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Organization Activity",
+   "x": 950,
+   "y": 403,
+   "w": 247,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "91.2%",
+   "x": 1313,
+   "y": 435,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Website Usage",
+   "x": 319,
+   "y": 890,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Category Usage",
+   "x": 892,
+   "y": 890,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Activity Summary",
+   "x": 319,
+   "y": 1352,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "286.9%",
+   "x": 336,
+   "y": 1787,
+   "w": 208,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "10.1%",
+   "x": 594,
+   "y": 1787,
+   "w": 208,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Tab Switching",
+   "x": 950,
+   "y": 1364,
+   "w": 254,
+   "h": 28
+  }
+ ],
+ "sub_dashboard": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1436,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Demo Sub Admin Alpha",
+   "x": 326,
+   "y": 164,
+   "w": 312,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "0%",
+   "x": 1258,
+   "y": 192,
+   "w": 102,
+   "h": 48
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 319,
+   "y": 381,
+   "w": 159,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 604,
+   "y": 381,
+   "w": 159,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 888,
+   "y": 381,
+   "w": 159,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "0",
+   "x": 1173,
+   "y": 381,
+   "w": 159,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Activity",
+   "x": 379,
+   "y": 516,
+   "w": 128,
+   "h": 23
+  },
+  {
+   "tag": "H3",
+   "text": "0.0%",
+   "x": 734,
+   "y": 547,
+   "w": 68,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Activity",
+   "x": 952,
+   "y": 516,
+   "w": 135,
+   "h": 23
+  },
+  {
+   "tag": "H3",
+   "text": "0.0%",
+   "x": 1307,
+   "y": 547,
+   "w": 68,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Category Usage",
+   "x": 319,
+   "y": 1002,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Website Usage",
+   "x": 892,
+   "y": 1002,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Websites",
+   "x": 319,
+   "y": 1464,
+   "w": 211,
+   "h": 28
+  }
+ ],
+ "sub_analytics": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 2136,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Analytics",
+   "x": 318,
+   "y": 128,
+   "w": 444,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 319,
+   "y": 293,
+   "w": 89,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "0.00%",
+   "x": 604,
+   "y": 293,
+   "w": 88,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 888,
+   "y": 293,
+   "w": 76,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "0m",
+   "x": 1173,
+   "y": 293,
+   "w": 59,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Organization Activity",
+   "x": 377,
+   "y": 403,
+   "w": 239,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "88.1%",
+   "x": 740,
+   "y": 435,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Organization Activity",
+   "x": 950,
+   "y": 403,
+   "w": 247,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "88.1%",
+   "x": 1313,
+   "y": 435,
+   "w": 62,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Category Usage",
+   "x": 319,
+   "y": 890,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Website Usage",
+   "x": 892,
+   "y": 890,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Organization Tab Switching",
+   "x": 377,
+   "y": 1364,
+   "w": 254,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Activity Summary",
+   "x": 319,
+   "y": 1992,
+   "w": 1072,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "0.0%",
+   "x": 336,
+   "y": 2435,
+   "w": 494,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "0.0%",
+   "x": 880,
+   "y": 2435,
+   "w": 494,
+   "h": 28
+  }
+ ],
+ "sub_users": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 836,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Organization Users",
+   "x": 366,
+   "y": 104,
+   "w": 265,
+   "h": 36
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Create User",
+   "x": 1262,
+   "y": 112,
+   "w": 154,
+   "h": 48
+  },
+  {
+   "tag": "TH",
+   "text": "Name",
+   "x": 294,
+   "y": 297,
+   "w": 213,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Email",
+   "x": 507,
+   "y": 297,
+   "w": 284,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Role",
+   "x": 791,
+   "y": 297,
+   "w": 98,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Status",
+   "x": 889,
+   "y": 297,
+   "w": 126,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Activity",
+   "x": 1015,
+   "y": 297,
+   "w": 223,
+   "h": 53
+  },
+  {
+   "tag": "TH",
+   "text": "Action",
+   "x": 1238,
+   "y": 297,
+   "w": 178,
+   "h": 53
+  },
+  {
+   "tag": "BUTTON",
+   "text": "View Activity",
+   "x": 1039,
+   "y": 366,
+   "w": 140,
+   "h": 36
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Deactivate",
+   "x": 1262,
+   "y": 366,
+   "w": 102,
+   "h": 36
+  },
+  {
+   "tag": "BUTTON",
+   "text": "View Activity",
+   "x": 1039,
+   "y": 435,
+   "w": 140,
+   "h": 36
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Deactivate",
+   "x": 1262,
+   "y": 435,
+   "w": 102,
+   "h": 36
+  }
+ ],
+ "sub_activity": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 3636,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Back to Users",
+   "x": 294,
+   "y": 104,
+   "w": 117,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Demo Employee Alpha One",
+   "x": 319,
+   "y": 169,
+   "w": 301,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Activity",
+   "x": 319,
+   "y": 461,
+   "w": 128,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Activity",
+   "x": 892,
+   "y": 461,
+   "w": 135,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Website Usage",
+   "x": 319,
+   "y": 959,
+   "w": 140,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Category Usage",
+   "x": 892,
+   "y": 959,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Activity History",
+   "x": 319,
+   "y": 1353,
+   "w": 264,
+   "h": 28
+  },
+  {
+   "tag": "TH",
+   "text": "Website",
+   "x": 319,
+   "y": 1421,
+   "w": 196,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Category",
+   "x": 515,
+   "y": 1421,
+   "w": 225,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Productivity",
+   "x": 740,
+   "y": 1421,
+   "w": 221,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Duration",
+   "x": 961,
+   "y": 1421,
+   "w": 132,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Start Time",
+   "x": 1093,
+   "y": 1421,
+   "w": 152,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "End Time",
+   "x": 1246,
+   "y": 1421,
+   "w": 145,
+   "h": 33
+  },
+  {
+   "tag": "H2",
+   "text": "Tab Switching",
+   "x": 319,
+   "y": 4425,
+   "w": 189,
+   "h": 28
+  },
+  {
+   "tag": "TH",
+   "text": "From",
+   "x": 319,
+   "y": 4493,
+   "w": 348,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "To",
+   "x": 667,
+   "y": 4493,
+   "w": 348,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Time",
+   "x": 1015,
+   "y": 4493,
+   "w": 376,
+   "h": 33
+  }
+ ],
+ "sub_activity_dark": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 3636,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Back to Users",
+   "x": 294,
+   "y": 104,
+   "w": 117,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "Demo Employee Alpha One",
+   "x": 319,
+   "y": 169,
+   "w": 301,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Weekly Activity",
+   "x": 319,
+   "y": 461,
+   "w": 128,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Monthly Activity",
+   "x": 892,
+   "y": 461,
+   "w": 135,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Website Usage",
+   "x": 319,
+   "y": 959,
+   "w": 140,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Category Usage",
+   "x": 892,
+   "y": 959,
+   "w": 499,
+   "h": 28
+  },
+  {
+   "tag": "H2",
+   "text": "Activity History",
+   "x": 319,
+   "y": 1353,
+   "w": 264,
+   "h": 28
+  },
+  {
+   "tag": "TH",
+   "text": "Website",
+   "x": 319,
+   "y": 1421,
+   "w": 196,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Category",
+   "x": 515,
+   "y": 1421,
+   "w": 225,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Productivity",
+   "x": 740,
+   "y": 1421,
+   "w": 221,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Duration",
+   "x": 961,
+   "y": 1421,
+   "w": 132,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Start Time",
+   "x": 1093,
+   "y": 1421,
+   "w": 152,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "End Time",
+   "x": 1246,
+   "y": 1421,
+   "w": 145,
+   "h": 33
+  },
+  {
+   "tag": "H2",
+   "text": "Tab Switching",
+   "x": 319,
+   "y": 4425,
+   "w": 189,
+   "h": 28
+  },
+  {
+   "tag": "TH",
+   "text": "From",
+   "x": 319,
+   "y": 4493,
+   "w": 348,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "To",
+   "x": 667,
+   "y": 4493,
+   "w": 348,
+   "h": 33
+  },
+  {
+   "tag": "TH",
+   "text": "Time",
+   "x": 1015,
+   "y": 4493,
+   "w": 376,
+   "h": 33
+  }
+ ],
+ "sub_org": [
+  {
+   "tag": "H1",
+   "text": "FocusGuard AI",
+   "x": 24,
+   "y": 24,
+   "w": 221,
+   "h": 32
+  },
+  {
+   "tag": "A",
+   "text": "Dashboard",
+   "x": 16,
+   "y": 121,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Planner",
+   "x": 16,
+   "y": 177,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Analytics",
+   "x": 16,
+   "y": 233,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "AI Insights",
+   "x": 16,
+   "y": 289,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Reports",
+   "x": 16,
+   "y": 345,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Organization",
+   "x": 16,
+   "y": 401,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Users",
+   "x": 16,
+   "y": 457,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "A",
+   "text": "Settings",
+   "x": 16,
+   "y": 513,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Logout",
+   "x": 16,
+   "y": 1036,
+   "w": 237,
+   "h": 48
+  },
+  {
+   "tag": "H1",
+   "text": "Dashboard",
+   "x": 294,
+   "y": 12,
+   "w": 167,
+   "h": 32
+  },
+  {
+   "tag": "H3",
+   "text": "Demo Sub Admin Alpha",
+   "x": 1263,
+   "y": 18,
+   "w": 153,
+   "h": 20
+  },
+  {
+   "tag": "H1",
+   "text": "My Organization",
+   "x": 378,
+   "y": 104,
+   "w": 489,
+   "h": 36
+  },
+  {
+   "tag": "H2",
+   "text": "Demo Corp Alpha",
+   "x": 411,
+   "y": 293,
+   "w": 195,
+   "h": 32
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Request Deactivation",
+   "x": 327,
+   "y": 485,
+   "w": 207,
+   "h": 48
+  }
+ ]
+}

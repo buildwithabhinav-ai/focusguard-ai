@@ -1,0 +1,123 @@
+{
+  "total": 13,
+  "passed": 12,
+  "results": [
+    {
+      "id": "SET-01",
+      "title": "Sub Admin: Settings shows profile with name, e-mail and role",
+      "expected": "name + e-mail + role visible",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-02",
+      "title": "Sub Admin: change password rejects a new password under 8 characters",
+      "expected": "error message, password unchanged",
+      "actual": "login with old pw still 200",
+      "status": "PASS",
+      "note": "",
+      "shot": "SET_subadmin_short.png"
+    },
+    {
+      "id": "SET-03",
+      "title": "Sub Admin: change password rejects mismatching confirmation",
+      "expected": "old password still valid",
+      "actual": "200",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-04",
+      "title": "Sub Admin: change password rejects wrong current password",
+      "expected": "old password still valid",
+      "actual": "200",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-05",
+      "title": "Sub Admin: valid change succeeds - new password works, old password is refused",
+      "expected": "new 200, old 401",
+      "actual": "new 200, old 401",
+      "status": "PASS",
+      "note": "",
+      "shot": "SET_subadmin_changed.png"
+    },
+    {
+      "id": "SET-06",
+      "title": "Sub Admin: 'Sign Out' card on the Settings page logs the user out",
+      "expected": "token removed, on /login",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-07",
+      "title": "User: Settings shows profile with name, e-mail and role",
+      "expected": "name + e-mail + role visible",
+      "actual": "True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-08",
+      "title": "User: change password rejects a new password under 8 characters",
+      "expected": "error message, password unchanged",
+      "actual": "login with old pw still 200",
+      "status": "PASS",
+      "note": "",
+      "shot": "SET_user_short.png"
+    },
+    {
+      "id": "SET-09",
+      "title": "User: change password rejects mismatching confirmation",
+      "expected": "old password still valid",
+      "actual": "200",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-10",
+      "title": "User: change password rejects wrong current password",
+      "expected": "old password still valid",
+      "actual": "200",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-11",
+      "title": "User: valid change succeeds - new password works, old password is refused",
+      "expected": "new 200, old 401",
+      "actual": "new 200, old 401",
+      "status": "PASS",
+      "note": "",
+      "shot": "SET_user_changed.png"
+    },
+    {
+      "id": "SET-12",
+      "title": "User: 'Sign Out' card on the Settings page logs the user out",
+      "expected": "token removed, on /login",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "SET-13",
+      "title": "Super Admin: 'Sign Out' card on the Settings page logs the user out and shows the login page",
+      "expected": "token removed, on #/login",
+      "actual": "token=none, (no hash) /login -> landing page",
+      "status": "FAIL",
+      "note": "Uses window.location.href='/login' and localStorage only: with HashRouter this lands on the landing page, and inside the Chrome extension (chrome.storage) the token would not be cleared",
+      "shot": null
+    }
+  ]
+}

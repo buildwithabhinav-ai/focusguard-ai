@@ -1,0 +1,14 @@
+ENGLISH = "en"
+
+HINDI = "hi"
+
+TAMIL = "ta"
+
+MALAYALAM = "ml"
+
+SUPPORTED_LANGUAGES = [
+    ENGLISH,
+    HINDI,
+    TAMIL,
+    MALAYALAM,
+]

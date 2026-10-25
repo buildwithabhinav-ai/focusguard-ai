@@ -1,0 +1,123 @@
+{
+ "fps": 30,
+ "total": 90,
+ "scenes": [
+  {
+   "name": "intro",
+   "start": 0,
+   "dur": 5.5,
+   "rdur": 4.5
+  },
+  {
+   "name": "problem",
+   "start": 5.5,
+   "dur": 5,
+   "rdur": 4
+  },
+  {
+   "name": "arch",
+   "start": 10.5,
+   "dur": 9,
+   "rdur": 7.5
+  },
+  {
+   "name": "ext",
+   "start": 19.5,
+   "dur": 7,
+   "rdur": 5.5
+  },
+  {
+   "name": "notif",
+   "start": 26.5,
+   "dur": 8,
+   "rdur": 7
+  },
+  {
+   "name": "planner",
+   "start": 34.5,
+   "dur": 9,
+   "rdur": 7.5
+  },
+  {
+   "name": "rag",
+   "start": 43.5,
+   "dur": 8,
+   "rdur": 6.5
+  },
+  {
+   "name": "chat",
+   "start": 51.5,
+   "dur": 8,
+   "rdur": 6.5
+  },
+  {
+   "name": "multi",
+   "start": 59.5,
+   "dur": 8,
+   "rdur": 7
+  },
+  {
+   "name": "insights",
+   "start": 67.5,
+   "dur": 6,
+   "rdur": 5
+  },
+  {
+   "name": "theme",
+   "start": 73.5,
+   "dur": 5,
+   "rdur": 4
+  },
+  {
+   "name": "org",
+   "start": 78.5,
+   "dur": 9,
+   "rdur": 7.5
+  },
+  {
+   "name": "team",
+   "start": 87.5,
+   "dur": 9,
+   "rdur": 7.5
+  },
+  {
+   "name": "roles",
+   "start": 96.5,
+   "dur": 6,
+   "rdur": 5
+  },
+  {
+   "name": "outro",
+   "start": 102.5,
+   "dur": 5.5,
+   "rdur": 5
+  }
+ ],
+ "clicks": [
+  29.7,
+  30.5,
+  31.3,
+  32.1,
+  38.0,
+  40.4,
+  41.9,
+  54.6,
+  59.0,
+  81.3,
+  82.6,
+  84.6,
+  89.2
+ ],
+ "hits": [
+  1.2,
+  6.8,
+  7.4,
+  8.0,
+  102.8
+ ],
+ "whooshes": [
+  60.2,
+  61.3
+ ],
+ "vtotal": 108
+}

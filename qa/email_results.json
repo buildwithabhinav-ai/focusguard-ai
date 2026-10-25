@@ -1,0 +1,204 @@
+{
+  "total": 22,
+  "passed": 22,
+  "results": [
+    {
+      "id": "MAIL-01",
+      "title": "Invite with working mail server answers 200 and email_sent=true",
+      "expected": "200, email_sent true, no link in response",
+      "actual": "200 {'message': 'Invitation Email Sent Successfully.', 'email_sent': True}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-02",
+      "title": "The mail server received exactly one message addressed to the invitee",
+      "expected": "1 mail to invitee",
+      "actual": "1 mail(s), to=['qa-tmp-mail-05019@example.com']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-03",
+      "title": "E-mail contains a link built from FRONTEND_URL (not hard-coded localhost)",
+      "expected": "http://app.example.test:5173/#/accept-invitation?token=...",
+      "actual": "http://app.example.test:5173/#/accept-invitation?token=eyJhbGciOiJIUzI...",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-04",
+      "title": "E-mail names the organisation and the 24-hour validity",
+      "expected": "mentions qa-tmp-mail-05019 and 24 hours",
+      "actual": "yes",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-05",
+      "title": "Super Admin gets an in-app 'Invitation Sent' notification",
+      "expected": "INVITATION_SENT present",
+      "actual": "['INVITATION_SENT', 'ORGANIZATION_CREATED']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-06",
+      "title": "The link from the e-mail can be used to create the Sub Admin",
+      "expected": "200, SUB_ADMIN",
+      "actual": "200 SUB_ADMIN",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-07",
+      "title": "A welcome e-mail is sent to the new Sub Admin after accepting",
+      "expected": "1 welcome mail",
+      "actual": "1",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-08",
+      "title": "Super Admin gets an 'Invitation Accepted' notification",
+      "expected": "INVITATION_ACCEPTED present",
+      "actual": "['INVITATION_ACCEPTED', 'INVITATION_SENT', 'ORGANIZATION_CREATED']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-09",
+      "title": "New Sub Admin has a welcome notification",
+      "expected": "SUB_ADMIN_WELCOME present",
+      "actual": "['SUB_ADMIN_WELCOME']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-10",
+      "title": "Mail server unreachable: invitation is still created, link is returned, reason is readable",
+      "expected": "200, email_sent false, link, reason",
+      "actual": "200 sent=False link=yes reason='Could not send the e-mail: [Errno 61] Connection refused'",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-11",
+      "title": "Fallback link points at FRONTEND_URL and can be accepted",
+      "expected": "accept works",
+      "actual": "",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-12",
+      "title": "Failed delivery creates an 'Invitation Not Delivered' notification for the Super Admin",
+      "expected": "INVITATION_FAILED present",
+      "actual": "['INVITATION_ACCEPTED', 'INVITATION_FAILED', 'INVITATION_ACCEPTED', 'INVITATION_SENT']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-13",
+      "title": "Failure is fast (connection refused, not a 15 s hang)",
+      "expected": "< 5 s",
+      "actual": "0.2s",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-16",
+      "title": "Gmail-style server (STARTTLS + login): invitation is delivered",
+      "expected": "200, email_sent true",
+      "actual": "200 {'message': 'Invitation Email Sent Successfully.', 'email_sent': True}",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-17",
+      "title": "App Password typed with spaces is sent without spaces (what Gmail expects)",
+      "expected": "login qa.sender@gmail.com / abcdefghijklmnop",
+      "actual": "[('qa.sender@gmail.com', 'abcdefghijklmnop')]",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-18",
+      "title": "Delivered message: From = the Gmail account, To = invitee, link inside",
+      "expected": "From qa.sender@gmail.com, To invitee, link present",
+      "actual": "From=qa.sender@gmail.com, To=['qa-tmp-mail-tls-05019@example.com']",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-19",
+      "title": "Wrong App Password: invite still works, reason says the login was rejected and what to do",
+      "expected": "email_sent false, mentions App Password",
+      "actual": "False 'The mail server rejected the e-mail login. For Gmail, turn on 2-Step Verificatio'",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-20",
+      "title": "setup_email.py saves the login in .env and keeps every other line",
+      "expected": "address + password saved (no spaces), other lines intact",
+      "actual": "SECRET_KEY=abc\nEMAIL_ADDRESS=qa.sender@gmail.com\nEMAIL_PASSWORD=<password>\nDATABASE_URL=postgresql://x\n",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-21",
+      "title": "setup_email.py sends a test e-mail and reports SUCCESS",
+      "expected": "SUCCESS printed, 1 mail received",
+      "actual": "exit 0, mails 1",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-22",
+      "title": "setup_email.py with a wrong App Password reports FAILED with the reason",
+      "expected": "FAILED + 'App Password'",
+      "actual": "exit 2",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-14",
+      "title": "With the placeholder .env the API says exactly what to configure and returns the link",
+      "expected": "200, email_sent false, 'not configured'",
+      "actual": "200 'E-mail is not configured on the server. Run ./venv/bin/python setup_em...'",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "MAIL-15",
+      "title": "Link in that case uses the default FRONTEND_URL",
+      "expected": "http://localhost:5173/#/accept-invitation?token=...",
+      "actual": "http://localhost:5173/#/accept-invitation?token=eyJhbGciOiJI",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    }
+  ]
+}

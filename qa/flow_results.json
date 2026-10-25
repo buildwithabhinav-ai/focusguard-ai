@@ -1,0 +1,145 @@
+{
+  "total": 15,
+  "passed": 15,
+  "results": [
+    {
+      "id": "FLOW-01",
+      "title": "Sub Admin creates an employee through the Create User modal",
+      "expected": "new row appears in the table",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_user_created.png"
+    },
+    {
+      "id": "FLOW-02",
+      "title": "New employee can log in via the API with the password the Sub Admin set",
+      "expected": "200",
+      "actual": 200,
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "FLOW-03",
+      "title": "Sub Admin deactivates the employee in the UI; employee login is then blocked",
+      "expected": "status Inactive, login 403",
+      "actual": "login 403, row: QA UI Employee\tqa-tmp-ui-37d44-emp@example.com\tUser\tInactive\t View Activity\t\u2014",
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_user_deactivated.png"
+    },
+    {
+      "id": "FLOW-04",
+      "title": "Sub Admin submits a deactivation request through the modal",
+      "expected": "PENDING request exists",
+      "actual": "PENDING",
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_request_submitted.png"
+    },
+    {
+      "id": "FLOW-05",
+      "title": "Super Admin approves the request in the UI; organisation members are locked out",
+      "expected": "login 403",
+      "actual": 403,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_request_approved.png"
+    },
+    {
+      "id": "FLOW-06",
+      "title": "Super Admin re-activates the organisation in the UI; Sub Admin can log in again",
+      "expected": "login 200",
+      "actual": 200,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_org_reactivated.png"
+    },
+    {
+      "id": "FLOW-07",
+      "title": "Super Admin creates an organisation through the modal",
+      "expected": "organisation exists",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_org_created.png"
+    },
+    {
+      "id": "FLOW-08",
+      "title": "Invite form with no mail server: shows what went wrong and a copyable invitation link",
+      "expected": "amber notice + link box",
+      "actual": "notice=True, link=yes",
+      "status": "PASS",
+      "note": "No SMTP credentials in .env, so the e-mail cannot be delivered; the Super Admin receives the link instead",
+      "shot": "FLOW_invite_result.png"
+    },
+    {
+      "id": "FLOW-14",
+      "title": "Copy link button works",
+      "expected": "button changes to 'Copied'",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "FLOW-15",
+      "title": "Super Admin's bell shows 'Invitation Not Delivered' for that invitation",
+      "expected": "INVITATION_FAILED present",
+      "actual": [
+        "INVITATION_FAILED",
+        "ORGANIZATION_CREATED",
+        "DEACTIVATION_REQUEST"
+      ],
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "FLOW-09",
+      "title": "Invitation page: password shorter than 8 characters is blocked in the form",
+      "expected": "error shown, no account",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_invite_short.png"
+    },
+    {
+      "id": "FLOW-10",
+      "title": "Invitation page: mismatching confirmation is blocked",
+      "expected": "Passwords do not match",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "FLOW-11",
+      "title": "Invitation page: valid password creates the Sub Admin and shows success",
+      "expected": "success message + login works",
+      "actual": "login 200",
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_invite_accepted.png"
+    },
+    {
+      "id": "FLOW-12",
+      "title": "Newly invited Sub Admin signs in and lands on the Sub Admin dashboard",
+      "expected": "/subadmin/dashboard",
+      "actual": "/subadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_invited_dashboard.png"
+    },
+    {
+      "id": "FLOW-13",
+      "title": "Re-opening the same invitation link shows an error",
+      "expected": "error text",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": "FLOW_invite_reuse.png"
+    }
+  ]
+}

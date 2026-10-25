@@ -1,0 +1,610 @@
+{
+  "total": 67,
+  "passed": 65,
+  "failed": 2,
+  "results": [
+    {
+      "id": "UI-01",
+      "title": "Landing page loads for anonymous visitor",
+      "expected": "/ stays on landing",
+      "actual": "/",
+      "status": "PASS",
+      "note": "",
+      "shot": "landing.png"
+    },
+    {
+      "id": "UI-02",
+      "title": "Login page renders",
+      "expected": "login form visible",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": "login.png"
+    },
+    {
+      "id": "UI-03",
+      "title": "Anonymous visitor opening a protected URL is sent to /login",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-04",
+      "title": "Register page renders",
+      "expected": "register form visible",
+      "actual": "/register",
+      "status": "PASS",
+      "note": "",
+      "shot": "register.png"
+    },
+    {
+      "id": "UI-05",
+      "title": "'Forgot Password?' link target opens a working page",
+      "expected": "forgot-password page",
+      "actual": "/forgot-password -> ''",
+      "status": "FAIL",
+      "note": "Link exists on login form but no /forgot-password route is defined and ForgotPasswordPage.tsx is an empty file",
+      "shot": null
+    },
+    {
+      "id": "UI-06",
+      "title": "Invitation page without token shows 'Invalid Invitation'",
+      "expected": "Invalid Invitation text",
+      "actual": "Invalid Invitation  This invitation link is invalid or incom",
+      "status": "PASS",
+      "note": "",
+      "shot": "invite_invalid.png"
+    },
+    {
+      "id": "UI-07",
+      "title": "Wrong password shows an error and stays on login",
+      "expected": "/login + error toast",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": "login_error.png"
+    },
+    {
+      "id": "UI-8",
+      "title": "SA: login redirects to /superadmin/dashboard",
+      "expected": "/superadmin/dashboard",
+      "actual": "/superadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_dashboard.png"
+    },
+    {
+      "id": "UI-9",
+      "title": "SA: sidebar shows Organization/Users only for admins",
+      "expected": "admin links shown",
+      "actual": "Organization=True, Users=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-10",
+      "title": "SA: planner page opens",
+      "expected": "/superadmin/planner, no crash",
+      "actual": "/superadmin/planner",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_planner.png"
+    },
+    {
+      "id": "UI-11",
+      "title": "SA: analytics page opens",
+      "expected": "/superadmin/analytics, no crash",
+      "actual": "/superadmin/analytics",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_analytics.png"
+    },
+    {
+      "id": "UI-12",
+      "title": "SA: ai page opens",
+      "expected": "/superadmin/ai, no crash",
+      "actual": "/superadmin/ai",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_ai.png"
+    },
+    {
+      "id": "UI-13",
+      "title": "SA: reports page opens",
+      "expected": "/superadmin/reports, no crash",
+      "actual": "/superadmin/reports",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_reports.png"
+    },
+    {
+      "id": "UI-14",
+      "title": "SA: organization page opens",
+      "expected": "/superadmin/organization, no crash",
+      "actual": "/superadmin/organization",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_organization.png"
+    },
+    {
+      "id": "UI-15",
+      "title": "SA: users page opens",
+      "expected": "/superadmin/users, no crash",
+      "actual": "/superadmin/users",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_users.png"
+    },
+    {
+      "id": "UI-16",
+      "title": "SA: settings page opens",
+      "expected": "/superadmin/settings, no crash",
+      "actual": "/superadmin/settings",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_settings.png"
+    },
+    {
+      "id": "UI-17",
+      "title": "SA: opening /subadmin/dashboard is redirected back to own area",
+      "expected": "/superadmin/dashboard",
+      "actual": "/superadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-18",
+      "title": "SA: opening /user/dashboard is redirected back",
+      "expected": "/superadmin/dashboard",
+      "actual": "/superadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-19",
+      "title": "SA: visiting /login while signed in redirects to dashboard",
+      "expected": "/superadmin/dashboard",
+      "actual": "/superadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-20",
+      "title": "SA: logout clears the session and returns to login/landing",
+      "expected": "no token, public page",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-21",
+      "title": "SA: after logout the protected URL is blocked",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-22",
+      "title": "SUB: login redirects to /subadmin/dashboard",
+      "expected": "/subadmin/dashboard",
+      "actual": "/subadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_dashboard.png"
+    },
+    {
+      "id": "UI-23",
+      "title": "SUB: sidebar shows Organization/Users only for admins",
+      "expected": "admin links shown",
+      "actual": "Organization=True, Users=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-24",
+      "title": "SUB: planner page opens",
+      "expected": "/subadmin/planner, no crash",
+      "actual": "/subadmin/planner",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_planner.png"
+    },
+    {
+      "id": "UI-25",
+      "title": "SUB: analytics page opens",
+      "expected": "/subadmin/analytics, no crash",
+      "actual": "/subadmin/analytics",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_analytics.png"
+    },
+    {
+      "id": "UI-26",
+      "title": "SUB: ai page opens",
+      "expected": "/subadmin/ai, no crash",
+      "actual": "/subadmin/ai",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_ai.png"
+    },
+    {
+      "id": "UI-27",
+      "title": "SUB: reports page opens",
+      "expected": "/subadmin/reports, no crash",
+      "actual": "/subadmin/reports",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_reports.png"
+    },
+    {
+      "id": "UI-28",
+      "title": "SUB: organization page opens",
+      "expected": "/subadmin/organization, no crash",
+      "actual": "/subadmin/organization",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_organization.png"
+    },
+    {
+      "id": "UI-29",
+      "title": "SUB: users page opens",
+      "expected": "/subadmin/users, no crash",
+      "actual": "/subadmin/users",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_users.png"
+    },
+    {
+      "id": "UI-30",
+      "title": "SUB: settings page opens",
+      "expected": "/subadmin/settings, no crash",
+      "actual": "/subadmin/settings",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_settings.png"
+    },
+    {
+      "id": "UI-31",
+      "title": "SUB: opening /superadmin/dashboard is redirected back to own area",
+      "expected": "/subadmin/dashboard",
+      "actual": "/subadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-32",
+      "title": "SUB: opening /user/dashboard is redirected back",
+      "expected": "/subadmin/dashboard",
+      "actual": "/subadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-33",
+      "title": "SUB: visiting /login while signed in redirects to dashboard",
+      "expected": "/subadmin/dashboard",
+      "actual": "/subadmin/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-34",
+      "title": "SUB: logout clears the session and returns to login/landing",
+      "expected": "no token, public page",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-35",
+      "title": "SUB: after logout the protected URL is blocked",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-36",
+      "title": "EMP: login redirects to /user/dashboard",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_dashboard.png"
+    },
+    {
+      "id": "UI-37",
+      "title": "EMP: sidebar shows Organization/Users only for admins",
+      "expected": "admin links hidden",
+      "actual": "Organization=False, Users=False",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-38",
+      "title": "EMP: planner page opens",
+      "expected": "/user/planner, no crash",
+      "actual": "/user/planner",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_planner.png"
+    },
+    {
+      "id": "UI-39",
+      "title": "EMP: analytics page opens",
+      "expected": "/user/analytics, no crash",
+      "actual": "/user/analytics",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_analytics.png"
+    },
+    {
+      "id": "UI-40",
+      "title": "EMP: ai page opens",
+      "expected": "/user/ai, no crash",
+      "actual": "/user/ai",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_ai.png"
+    },
+    {
+      "id": "UI-41",
+      "title": "EMP: reports page opens",
+      "expected": "/user/reports, no crash",
+      "actual": "/user/reports",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_reports.png"
+    },
+    {
+      "id": "UI-42",
+      "title": "EMP: settings page opens",
+      "expected": "/user/settings, no crash",
+      "actual": "/user/settings",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_settings.png"
+    },
+    {
+      "id": "UI-43",
+      "title": "EMP: opening /superadmin/dashboard is redirected back to own area",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-44",
+      "title": "EMP: visiting /login while signed in redirects to dashboard",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-45",
+      "title": "EMP: logout clears the session and returns to login/landing",
+      "expected": "no token, public page",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-46",
+      "title": "EMP: after logout the protected URL is blocked",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-47",
+      "title": "USR: login redirects to /user/dashboard",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_dashboard.png"
+    },
+    {
+      "id": "UI-48",
+      "title": "USR: sidebar shows Organization/Users only for admins",
+      "expected": "admin links hidden",
+      "actual": "Organization=False, Users=False",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-49",
+      "title": "USR: planner page opens",
+      "expected": "/user/planner, no crash",
+      "actual": "/user/planner",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_planner.png"
+    },
+    {
+      "id": "UI-50",
+      "title": "USR: analytics page opens",
+      "expected": "/user/analytics, no crash",
+      "actual": "/user/analytics",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_analytics.png"
+    },
+    {
+      "id": "UI-51",
+      "title": "USR: ai page opens",
+      "expected": "/user/ai, no crash",
+      "actual": "/user/ai",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_ai.png"
+    },
+    {
+      "id": "UI-52",
+      "title": "USR: reports page opens",
+      "expected": "/user/reports, no crash",
+      "actual": "/user/reports",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_reports.png"
+    },
+    {
+      "id": "UI-53",
+      "title": "USR: settings page opens",
+      "expected": "/user/settings, no crash",
+      "actual": "/user/settings",
+      "status": "PASS",
+      "note": "",
+      "shot": "USR_settings.png"
+    },
+    {
+      "id": "UI-54",
+      "title": "USR: opening /superadmin/dashboard is redirected back to own area",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-55",
+      "title": "USR: visiting /login while signed in redirects to dashboard",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-56",
+      "title": "USR: logout clears the session and returns to login/landing",
+      "expected": "no token, public page",
+      "actual": "token=none, /login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-57",
+      "title": "USR: after logout the protected URL is blocked",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-58",
+      "title": "SUB: users page lists Alpha employees only",
+      "expected": "Alpha One/Two visible, Beta hidden",
+      "actual": "Alpha One=True, Beta=False",
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_users_detail.png"
+    },
+    {
+      "id": "UI-59",
+      "title": "SUB: opening activity of a non-existent user does not crash the app",
+      "expected": "page still renders",
+      "actual": "/subadmin/users/999999/activity",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-60",
+      "title": "SUB: organisation page shows own organisation",
+      "expected": "Demo Corp Alpha",
+      "actual": true,
+      "status": "PASS",
+      "note": "",
+      "shot": "SUB_organization_detail.png"
+    },
+    {
+      "id": "UI-61",
+      "title": "SA: organisation tab 'organizations' opens",
+      "expected": "/superadmin/organization/organizations",
+      "actual": "/superadmin/organization/organizations",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_org_organizations.png"
+    },
+    {
+      "id": "UI-62",
+      "title": "SA: organisation tab 'users' opens",
+      "expected": "/superadmin/organization/users",
+      "actual": "/superadmin/organization/users",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_org_users.png"
+    },
+    {
+      "id": "UI-63",
+      "title": "SA: organisation tab 'requests' opens",
+      "expected": "/superadmin/organization/requests",
+      "actual": "/superadmin/organization/requests",
+      "status": "PASS",
+      "note": "",
+      "shot": "SA_org_requests.png"
+    },
+    {
+      "id": "UI-64",
+      "title": "SA: organisation list shows Demo Corp Alpha and Beta",
+      "expected": "both visible",
+      "actual": "Alpha=True, Beta=True",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-65",
+      "title": "Corrupted/expired token in storage sends user back to login",
+      "expected": "/login",
+      "actual": "/login",
+      "status": "PASS",
+      "note": "",
+      "shot": null
+    },
+    {
+      "id": "UI-66",
+      "title": "Session expires while the user is working: next action sends them to login",
+      "expected": "/login",
+      "actual": "/user/analytics",
+      "status": "FAIL",
+      "note": "Front end has no 401 handler and never calls /auth/refresh-token, so after the 60-minute token expires the pages silently fail instead of asking the user to log in again",
+      "shot": "expired_midsession.png"
+    },
+    {
+      "id": "UI-67",
+      "title": "Mobile width (390px): login works and dashboard renders",
+      "expected": "/user/dashboard",
+      "actual": "/user/dashboard",
+      "status": "PASS",
+      "note": "",
+      "shot": "EMP_dashboard_mobile.png"
+    }
+  ]
+}
