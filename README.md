@@ -1,574 +1,306 @@
-# FocusGuard AI
+<div align="center">
 
-### Human Attention Preservation & Digital Distraction Intelligence Platform
+<img src="demo_video/assets/banners/b5.jpg" alt="FocusGuard AI: Guard your focus" width="100%">
+
+<br><br>
+
+<img src="docs/assets/tagline.svg" alt="Track your attention. Plan your focus. Ask your own data." width="720">
+
+<br>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-4F46E5?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-backend-4F46E5?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React_19-frontend-6D5AE6?style=for-the-badge&logo=react&logoColor=white" alt="React 19">
+  <img src="https://img.shields.io/badge/TypeScript-7C5CF0?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/PostgreSQL-pgvector-8B5CF6?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL with pgvector">
+  <img src="https://img.shields.io/badge/Chrome-Manifest_V3-A78BFA?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome extension, Manifest V3">
+  <img src="https://img.shields.io/badge/LLM-Groq_%2B_Gemini-FACC15?style=for-the-badge&logoColor=black&labelColor=1E1B4B" alt="Groq with Gemini fallback">
+</p>
+
+<p>
+  <a href="#see-it-in-action">Screens</a> &nbsp;·&nbsp;
+  <a href="#what-it-does">Features</a> &nbsp;·&nbsp;
+  <a href="#how-it-fits-together">Architecture</a> &nbsp;·&nbsp;
+  <a href="#the-rag-pipeline">RAG</a> &nbsp;·&nbsp;
+  <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
+  <a href="#project-layout">Layout</a>
+</p>
+
+</div>
+
+<img src="docs/assets/divider.svg" alt="" width="100%">
+
+## Why FocusGuard AI
+
+Most screen-time tools tell you how long you were online. FocusGuard AI compares what you planned to work on with what you are actually doing, scores the difference, and explains it in plain language.
+
+A Chrome extension records browser activity: which sites you visit, how long, when you switch tabs, when you go idle. A FastAPI backend turns that into analytics, and an LLM turns the analytics into advice. Past days are stored as embeddings in PostgreSQL, so the advice can draw on your history and not only on today.
+
+It works for individuals and for teams. Organizations, Sub Admins and Super Admins each see only the data their role allows.
 
 <p align="center">
-  <strong>AI-powered productivity and digital attention intelligence platform</strong>
+  <a href="https://github.com/buildwithabhinav-ai/focusguard-ai/blob/main/focusguard-ui/public/demo/focusguard-demo.mp4">
+    <img src="focusguard-ui/public/demo/focusguard-demo-poster.jpg" alt="Watch the FocusGuard AI demo video" width="720">
+  </a>
+  <br>
+  <sub>Click the poster to watch the demo video.</sub>
+</p>
+
+<img src="docs/assets/divider.svg" alt="" width="100%">
+
+## See it in action
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="demo_video/shots/emp_dashboard_dark.png">
+    <img src="demo_video/shots/emp_dashboard.png" alt="Employee dashboard with focus score, planner and live focus status" width="440">
+  </picture>
+  &nbsp;
+  <img src="demo_video/shots/f_chat.png" alt="AI insights page with the FocusGuard chat assistant open" width="520">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi" alt="FastAPI">
-  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react" alt="React">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript" alt="TypeScript">
-  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/pgvector-RAG-3B82F6" alt="pgvector">
-  <img src="https://img.shields.io/badge/LLM-Groq%20%7C%20Gemini-purple" alt="LLM">
-  <img src="https://img.shields.io/badge/RAG-Enabled-orange" alt="RAG">
+  <sub>Left: the employee dashboard (it follows your GitHub theme). Right: AI insights and the chat assistant.</sub>
 </p>
 
-<p align="center">
-  <a href="https://github.com/aditikumari4623/FocusGuard-AI">Repository</a>
-  ·
-  <a href="#-key-features">Features</a>
-  ·
-  <a href="#-retrieval-augmented-generation-rag">RAG</a>
-  ·
-  <a href="#-tech-stack">Tech Stack</a>
-</p>
+<details>
+<summary><b>More screens</b></summary>
+<br>
+
+| Landing page | Super Admin dashboard |
+| :---: | :---: |
+| <img src="demo_video/shots/landing.png" alt="Landing page" width="420"> | <img src="demo_video/shots/sa_dashboard.png" alt="Super Admin dashboard with weekly and monthly organization activity" width="420"> |
+
+| Focus planner | Multi-language UI |
+| :---: | :---: |
+| <img src="demo_video/shots/f_planner_on.png" alt="Focus planner with a live session" width="420"> | <img src="demo_video/shots/f_hindi.png" alt="Interface translated into Hindi" width="420"> |
+
+</details>
+
+<img src="docs/assets/divider.svg" alt="" width="100%">
+
+## What it does
+
+| Area | What you get |
+| :-- | :-- |
+| Activity tracking | A Manifest V3 Chrome extension records websites, start and end times, tab switches, active and idle status, and a category for each site (productive or distracting). |
+| Analytics | Active, idle, browser, productive and non-productive time, a focus score, and breakdowns by website, category and tab switches. Org-level views add weekly and monthly activity. |
+| AI recommendations | An LLM reads your numbers and writes personalized suggestions. Groq is the preferred provider and Gemini is the fallback. |
+| Chat assistant | Ask about your own productivity. It keeps today's analytics separate from historical context. |
+| Historical RAG | Daily summaries become embeddings in pgvector, so answers can refer to patterns across weeks. |
+| Focus planner | Plan focus sessions by category. The extension checks your live activity against the plan and flags when you drift. |
+| Notifications | Reminders for long breaks, long idle stretches, long non-productive activity, and planner events. Each user sees only their own. |
+| Teams and roles | Organizations, invitations, Super Admin, Sub Admin and User roles, and deactivation workflows. |
+| Languages | A language selector with translated interface text, backed by Sarvam AI translation. The screens above include Hindi and Tamil. |
+| Look and feel | Responsive layouts, light and dark themes, role-specific dashboards and interactive charts. |
+
+### Roles
+
+| Role | Sees |
+| :-- | :-- |
+| Super Admin | Every organization, its users and requests, and organization-wide analytics. |
+| Sub Admin | Their own organization: users, invitations, planner and analytics. |
+| User | Their own dashboard, planner, analytics, AI insights and reports. |
+
+<img src="docs/assets/divider.svg" alt="" width="100%">
+
+## How it fits together
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#EEF2FF','primaryTextColor':'#1E1B4B','primaryBorderColor':'#4F46E5','lineColor':'#8B5CF6','secondaryColor':'#FEF9C3','tertiaryColor':'#F5F3FF','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
+flowchart LR
+    EXT["Chrome extension<br/>Manifest V3"] -->|REST| API
+    UI["React dashboard<br/>Vite, TypeScript, Tailwind"] -->|REST| API
+
+    subgraph API["FastAPI backend"]
+        direction TB
+        A1["Auth and roles"]
+        A2["Activity and analytics"]
+        A3["Planner and notifications"]
+        A4["Organizations and users"]
+    end
+
+    API --> DB[("PostgreSQL<br/>app data + pgvector")]
+    API --> LLM["LLM layer<br/>Groq, Gemini fallback"]
+    API --> TR["Translation<br/>Sarvam AI"]
+    DB -. history .-> LLM
+    LLM --> OUT(["Recommendations<br/>and chat replies"])
+
+    classDef brand fill:#4F46E5,stroke:#312E81,color:#fff;
+    classDef accent fill:#FACC15,stroke:#A16207,color:#1E1B4B;
+    class EXT,UI brand;
+    class OUT accent;
+```
+
+### The RAG pipeline
+
+Yesterday's focus is as useful as today's, so the chat assistant and the recommendations can look back. Each day's analytics are written up as a short text summary, embedded with `all-MiniLM-L6-v2` (384 dimensions), and stored in PostgreSQL through `pgvector`. At question time, the closest summaries come back and are passed to the LLM as context.
+
+Retrieval filters by user and organization inside the database query itself, so another person's data is never fetched and filtered out afterward.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#EEF2FF','primaryTextColor':'#1E1B4B','primaryBorderColor':'#4F46E5','lineColor':'#8B5CF6','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
+flowchart LR
+    A["User activity"] --> B["Analytics engine"]
+    B --> C["Daily summary"]
+    C --> D["Text document"]
+    D --> E["Embedding<br/>all-MiniLM-L6-v2"]
+    E --> F[("pgvector")]
+    Q["Your question"] --> G["Similarity search<br/>scoped to user and org"]
+    F --> G
+    G --> H["Historical context"]
+    H --> I["LLM"]
+    I --> J(["Personalized answer"])
+
+    classDef brand fill:#4F46E5,stroke:#312E81,color:#fff;
+    classDef accent fill:#FACC15,stroke:#A16207,color:#1E1B4B;
+    class A,Q brand;
+    class J accent;
+```
+
+The code covers document generation, embeddings, vector storage, retrieval, context building, daily and scheduled ingestion, and both user-level and organization-level RAG. Swapping in another LLM provider does not change the main application flow.
+
+<img src="docs/assets/divider.svg" alt="" width="100%">
+
+## Tech stack
+
+| Layer | Built with |
+| :-- | :-- |
+| Backend | Python, FastAPI, SQLAlchemy, Pydantic, Uvicorn, JWT authentication, APScheduler |
+| Frontend | React 19, TypeScript, Vite, Tailwind CSS, shadcn and Radix UI, Recharts, TanStack Query, Framer Motion, Lucide icons |
+| AI | Groq, Gemini, Sentence Transformers, Sarvam AI for translation |
+| Data | PostgreSQL with pgvector |
+| Extension | Chrome Manifest V3, JavaScript |
 
----
+<img src="docs/assets/divider.svg" alt="" width="100%">
 
-FocusGuard AI is an AI-powered productivity and digital attention monitoring platform that analyzes users' digital activity, identifies distraction patterns, tracks focus behavior, and provides personalized recommendations to improve productivity.
+## Quick start
 
-The platform combines a FastAPI backend, React frontend, PostgreSQL database, Chrome Extension, analytics, AI/LLM integration, and Retrieval-Augmented Generation (RAG) to provide both real-time and historical productivity insights.
+You need Python 3, Node.js, and a PostgreSQL instance where you can enable `pgvector`.
 
----
+**1. Clone**
 
-## 🚀 Key Features
+```bash
+git clone https://github.com/buildwithabhinav-ai/focusguard-ai.git
+cd focusguard-ai
+```
 
-### 🔐 Authentication & Authorization
+**2. Backend**
 
-- User registration and login
-- JWT-based authentication
-- Access and refresh tokens
-- Secure password hashing
-- Role-Based Access Control (RBAC)
-- Three user roles:
-  - Super Admin
-  - Sub Admin
-  - User
-- User and organization deactivation workflows
-
----
-
-### 🏢 Organization Management
-
-- Create and manage organizations
-- Assign users to organizations
-- Invite users and Sub Admins
-- Organization-level analytics
-- Organization deactivation workflow
-- Role-specific access and data isolation
-
----
-
-### 🌐 Digital Activity Tracking
-
-The Chrome Extension tracks users' browser activity and sends activity information to the backend.
-
-Tracked information includes:
-
-- Website activity
-- Activity start and end time
-- Tab switches
-- Active/idle status
-- Website categories
-- Productive and distracting websites
-
-The extension communicates with the FastAPI backend through REST APIs.
-
----
-
-### 📊 Productivity Analytics
-
-FocusGuard AI provides analytics at multiple levels.
-
-#### User Analytics
-
-- Active time
-- Idle time
-- Browser time
-- Productive time
-- Non-productive time
-- Focus score
-- Website analytics
-- Category analytics
-- Tab-switch analytics
-
-#### Organization Analytics
-
-Super Admins and Sub Admins can view organization-level productivity insights while maintaining role-based access restrictions.
-
-Analytics include:
-
-- Organization activity
-- Focus score
-- Website usage
-- Category distribution
-- Tab switching
-- Weekly activity
-- Monthly activity
-
----
-
-
-## 🤖 AI-Powered Productivity Recommendations
-
-FocusGuard AI uses Large Language Models to transform productivity analytics into personalized recommendations.
-
-The AI layer can analyze information such as:
-
-- Focus score
-- Active time
-- Idle time
-- Browser activity
-- Productive websites
-- Distracting websites
-- Website categories
-- Tab switching behavior
-- Historical productivity patterns
-
-The application currently uses **Groq as the preferred LLM provider**, with Gemini available as a fallback.
-
-The architecture is designed so additional LLM providers can be integrated without changing the main application flow.
-
----
-
-## 🧠 Retrieval-Augmented Generation (RAG)
-
-FocusGuard AI also includes a RAG pipeline for historical productivity analysis.
-
-Instead of relying only on the current day's analytics, historical productivity summaries are converted into embeddings and stored in PostgreSQL using `pgvector`.
-
-### RAG Pipeline
-
-```text
-User Activity
-      ↓
-Analytics Engine
-      ↓
-Daily Productivity Summary
-      ↓
-Text Document Generation
-      ↓
-Embedding Generation
-      ↓
-PostgreSQL + pgvector
-      ↓
-Semantic Similarity Search
-      ↓
-Relevant Historical Context
-      ↓
-LLM
-      ↓
-Personalized AI Response
-
-
-RAG Components
-
-The project includes:
-
-Document generation
-Sentence Transformer embeddings
-Vector storage
-Semantic similarity retrieval
-Historical context construction
-Daily ingestion
-Organization-level RAG
-User-level RAG
-Scheduled ingestion
-Historical context filtering
-
-The embedding model used is:
-all-MiniLM-L6-v2
-with a 384-dimensional embedding vector.
-
-Historical retrieval is also isolated by user and organization to prevent unrelated productivity data from being included in AI responses.
-
-
-
-💬 AI Chatbot
-
-FocusGuard AI includes an AI chatbot that can answer FocusGuard-related productivity questions.
-
-The chatbot can use:
-
-Current productivity analytics
-Historical productivity context
-User activity patterns
-FocusGuard-specific application data
-
-The chatbot is designed to distinguish current analytics from historical RAG context.
-
-
-🧭 Focus Planner
-
-The Focus Planner helps users organize focused work sessions.
-
-Features include:
-
-Create focus plans
-Edit existing plans
-View today's plan
-Track planned categories
-Monitor current sessions
-Track progress
-Live focus status
-AI-powered planner recommendations
-Focus checking against planned activities
-
-The Chrome Extension periodically communicates with the planner APIs to determine whether the user's current activity matches the planned focus category.
-
-
-🔔 Smart Notifications
-
-FocusGuard AI provides productivity notifications based on user activity.
-
-Examples include:
-
-Extended break requirements
-Long non-productive activity
-Extended idle activity
-Focus reminders
-Planner-related notifications
-
-Notifications are scoped to the authenticated user so that users only access their own notifications.
-
-
-🌍 Multi-language Support
-
-The application includes translation support for the user interface.
-
-The frontend provides a language selector and translation context, while the backend exposes translation-related APIs and services.
-
-
-
-### 🎨 Modern Responsive UI
-
-The frontend is built with:
-
-React
-TypeScript
-Vite
-Tailwind CSS
-shadcn/Radix UI components
-Lucide icons
-Recharts
-next-themes
-
-The application supports:
-Responsive layouts
-Light mode
-Dark mode
-Role-specific dashboards
-Interactive analytics
-Modern dashboard components
-
-
-🏗️ System Architecture
-
-                         ┌──────────────────────┐
-                         │    Chrome Extension  │
-                         │   Manifest V3        │
-                         └──────────┬───────────┘
-                                    │
-                                    │ REST APIs
-                                    ↓
-┌────────────────────────────────────────────────────────────┐
-│                     FastAPI Backend                        │
-│                                                            │
-│  Authentication   Activity   Analytics   Planner           │
-│  Organizations    Users      Notifications   AI            │
-│                                                            │
-└───────────────┬──────────────────────────┬─────────────────┘
-                │                          │
-                ↓                          ↓
-       ┌─────────────────┐        ┌─────────────────────┐
-       │   PostgreSQL    │        │     AI / LLM Layer  │
-       │                 │        │                     │
-       │ Application DB  │        │ Groq                │
-       │ RAG Documents   │        │ Gemini fallback     │
-       │ pgvector        │        │                     │
-       └─────────────────┘        └──────────┬──────────┘
-                                             │
-                                             ↓
-                                      AI Recommendations
-                                      & Chat Responses
-
-
-                 ┌─────────────────────────────┐
-                 │       React Frontend        │
-                 │                             │
-                 │ Dashboards / Analytics      │
-                 │ Planner / Reports           │
-                 │ AI / Settings               │
-                 └─────────────────────────────┘
-
-
-
-
-
-🛠️ Tech Stack
-Backend:
-Python
-FastAPI
-SQLAlchemy
-PostgreSQL
-pgvector
-JWT Authentication
-Pydantic
-Uvicorn
-
-Frontend:
-React
-TypeScript
-Vite
-Tailwind CSS
-shadcn/Radix UI
-Recharts
-Lucide React
-TanStack Query
-
-AI / Machine Learning:
-Groq API
-Gemini API
-Sentence Transformers
-all-MiniLM-L6-v2
-Retrieval-Augmented Generation (RAG)
-Vector similarity search
-
-Browser Extension:
-Chrome Extension
-Manifest V3
-JavaScript
-REST API integration
-
-Database:
-PostgreSQL
-pgvector
-SQLAlchemy
-
-
-
-📁 Project Structure
-
-FocusGuardAI/
-│
-├── app/
-│   ├── routers/
-│   │   ├── activity.py
-│   │   ├── admin.py
-│   │   ├── ai.py
-│   │   ├── analytics.py
-│   │   ├── auth.py
-│   │   ├── organization.py
-│   │   └── users.py
-│   │
-│   ├── services/
-│   │   ├── rag/
-│   │   │   ├── context_builder.py
-│   │   │   ├── daily_ingestion.py
-│   │   │   ├── documents.py
-│   │   │   ├── embeddings.py
-│   │   │   ├── rag_service.py
-│   │   │   ├── retriever.py
-│   │   │   ├── scheduler.py
-│   │   │   └── vector_store.py
-│   │   │
-│   │   ├── analytics_service.py
-│   │   ├── llm.py
-│   │   └── prompts.py
-│   │
-│   ├── config.py
-│   ├── database.py
-│   ├── models.py
-│   ├── schemas.py
-│   └── main.py
-│
-├── chrome_extension/
-│   ├── background.js
-│   ├── api.js
-│   ├── storage.js
-│   └── manifest.json
-│
-├── focusguard-ui/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── hooks/
-│   │   └── pages/
-│   └── package.json
-│
-├── test_rag_retrieval.py
-├── test_rag_vector_store.py
-├── test_rag_organization.py
-├── backfill_rag.py
-├── requirements.txt
-└── README.md
-
-
-
-⚙️ Local Setup
-1. Clone the repository:
-git clone https://github.com/aditikumari4623/FocusGuard-AI.git
-cd FocusGuard-AI
-
-
-2. Backend Setup:
-Create and activate a virtual environment.
-
-Windows
+```bash
 python -m venv venv
-.\venv\Scripts\Activate.ps1
-
-Install dependencies:
+source venv/bin/activate        # Windows: .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+```
 
+**3. Environment variables**
 
-3. Environment Variables:
-Create a .env file in the project root.
+Copy `.env.example` to `.env` and fill it in. The essentials:
 
-Example:
+```env
 SECRET_KEY=your_secret_key
 DATABASE_URL=your_postgresql_database_url
 
-EMAIL_ADDRESS=your_email
-EMAIL_PASSWORD=your_email_password
-
 GROQ_API_KEY=your_groq_api_key
 GEMINI_API_KEY=your_gemini_api_key
-OPENAI_API_KEY=your_openai_api_key
-
 DEFAULT_LLM=groq
 
+SARVAM_API_KEY=your_sarvam_api_key   # translation
 
+EMAIL_ADDRESS=your_email             # invitation e-mails
+EMAIL_PASSWORD=your_app_password
+```
 
-4. PostgreSQL + pgvector:
-The RAG system requires PostgreSQL with the pgvector extension enabled.
+`.env.example` lists every option, including SMTP settings, `CORS_ORIGINS`, `FRONTEND_URL` and `SUPPORT_EMAIL`.
 
-The project contains helper scripts for:
+**4. Database and pgvector**
 
-Creating the RAG table
-Checking pgvector
-Enabling pgvector
-Backfilling historical RAG data
+The RAG features need the `pgvector` extension. Helper scripts in the project root do the setup:
 
+| Script | Purpose |
+| :-- | :-- |
+| `enable_pgvector.py` | Enables the extension |
+| `check_pgvector.py` | Confirms it is working |
+| `create_rag_table.py` | Creates the RAG table |
+| `backfill_rag.py` | Builds embeddings for existing history |
 
+**5. Run the backend**
 
-5. Run the Backend:
-uvicorn app.main:app --reload
+```bash
+uvicorn app.main:app --reload --port 8000
+```
 
-The API will be available locally through the FastAPI server.
+**6. Run the frontend**
 
-
-🌐 Frontend Setup
-
-Navigate to the frontend:
+```bash
 cd focusguard-ui
-
-Install dependencies:
 npm install
-
-Run the development server:
 npm run dev
+```
 
+The app opens at `http://localhost:5173`. On macOS with Homebrew PostgreSQL, `./focusguard.sh` starts PostgreSQL, the backend and the frontend together.
 
-🧩 Chrome Extension
+### Load the Chrome extension
 
-The Chrome Extension is used to collect browser activity and communicate with the backend.
+1. Open `chrome://extensions/` and switch on Developer mode.
+2. Choose Load unpacked and select the `chrome_extension` folder.
+3. In `chrome_extension/config.js`, `USE_LOCAL_BACKEND` points the extension at `http://127.0.0.1:8000` while it is `true`. Set it to `false` to use the deployed backend.
 
-General setup:
+<img src="docs/assets/divider.svg" alt="" width="100%">
 
-1. Open Chrome.
-2. Navigate to:
- chrome://extensions/
-3. Enable Developer mode.
-4. Select Load unpacked.
-5. Select the chrome_extension directory.
-6. Configure the backend API URL according to your local environment.
+## Security and data isolation
 
+- Passwords are hashed, sessions use JWT access and refresh tokens, and role-based access control limits what each role can reach.
+- Super Admin data, Sub Admin organization data and individual user data are kept apart.
+- RAG retrieval applies the user and organization filters in the SQL query.
+- Secrets live in environment variables, and `.env` is excluded from version control.
 
-🔒 Security & Data Isolation:
+## Testing
 
-FocusGuard AI uses role-based and user-based access controls.
-The application separates:
+The repository has RAG tests for vector storage, semantic retrieval, historical context, organization-level retrieval, API integration and real-data scenarios. The `qa/` folder adds scripts for API, UI, browser extension, e-mail flow and RAG checks.
 
-Super Admin data
-Sub Admin organization data
-Individual user data
-
-RAG retrieval also applies user and organization filters at the database query level rather than retrieving unrelated documents and filtering them afterward.
-
-Sensitive configuration values are stored through environment variables and are excluded from version control.
-
-
-🧪 Testing
-
-The repository includes tests for the RAG functionality, including:
-
-Vector storage
-Semantic retrieval
-Historical RAG
-Organization-level retrieval
-API/RAG integration
-Real-data RAG scenarios
-
-Example:
+```bash
 pytest
+```
 
+## Project layout
 
-📈 Current Project Capabilities
+```text
+focusguard-ai/
+├── app/                      FastAPI backend
+│   ├── routers/              activity, admin, ai, analytics, auth, notifications,
+│   │                         organization, planner, translation, users
+│   ├── services/
+│   │   ├── rag/              documents, embeddings, vector store, retriever,
+│   │   │                     context builder, daily ingestion, scheduler
+│   │   ├── llm.py            provider selection (Groq, Gemini)
+│   │   ├── prompts.py
+│   │   └── translation_service.py
+│   ├── models.py  schemas.py  config.py  database.py  main.py
+│   └── scripts/              RAG backfill and rebuild helpers
+├── chrome_extension/         Manifest V3 extension (background worker, popup, API client)
+├── focusguard-ui/            React + TypeScript dashboard
+│   └── src/                  api, components, context, hooks, layouts, pages, routes
+├── demo_video/               scripts and assets used to build the demo video
+├── qa/                       API, UI, extension and RAG test scripts
+├── backfill_rag.py  create_rag_table.py  enable_pgvector.py  check_pgvector.py
+├── focusguard.sh             one-command local start (macOS)
+└── requirements.txt
+```
 
-FocusGuard AI currently combines:
-Browser Activity Tracking
-        +
-Productivity Analytics
-        +
-Focus Planning
-        +
-Role-Based Organization Management
-        +
-Notifications
-        +
-LLM Recommendations
-        +
-AI Chatbot
-        +
-Historical RAG
-        ↓
-Digital Attention Intelligence Platform
+<img src="docs/assets/divider.svg" alt="" width="100%">
 
+## Support
 
+Questions, account problems, or want to talk to the team? Write to [support.focusguardai@gmail.com](mailto:support.focusguardai@gmail.com).
 
-## 📬 Support & Contact
+The address is set in one place for the web app, `focusguard-ui/src/config/support.ts`, and as `SUPPORT_EMAIL` in the backend `.env`.
 
-Questions, problems with an account, or want to talk to the team?
-Write to **[support.focusguardai@gmail.com](mailto:support.focusguardai@gmail.com)**.
+## Developer
 
-The address is used by the Contact page, the "Talk to our team" and Enterprise buttons, the footer, the
-Privacy and Terms pages, the Settings pages ("Need help?"), the login "Forgot Password?" link, the Chrome
-extension popup, and the invitation / welcome e-mails. In the web app it lives in one place,
-`focusguard-ui/src/config/support.ts`; in the backend it is `SUPPORT_EMAIL` in `.env`.
+Built by Aditi Kumari, Computer Science Engineering, class of 2026. Focus areas: full-stack development, backend and REST APIs, database systems, and generative AI with RAG.
 
-## 👩‍💻 Developer
-
-Aditi Kumari
-
-Computer Science Engineering — 2026
-
-Focus areas:
-
-Software Engineering
-Backend Development
-Full-Stack Development
-AI / Generative AI
-RAG Systems
-REST APIs
-Database Systems
-
-
-📌 Note
-
-This project was developed as a full-stack AI productivity and digital attention intelligence platform, combining software engineering, browser activity tracking, analytics, LLM integration, and Retrieval-Augmented Generation.
+<p align="center">
+  <sub>FocusGuard AI: Human Attention Preservation and Digital Distraction Intelligence Platform</sub>
+</p>
