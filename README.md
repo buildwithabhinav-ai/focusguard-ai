@@ -40,8 +40,8 @@ A Chrome extension records browser activity: which sites you visit, how long, wh
 It works for individuals and for teams. Organizations, Sub Admins and Super Admins each see only the data their role allows.
 
 <p align="center">
-  <a href="https://github.com/buildwithabhinav-ai/focusguard-ai/blob/main/focusguard-ui/public/demo/focusguard-demo.mp4">
-    <img src="focusguard-ui/public/demo/focusguard-demo-poster.jpg" alt="Watch the FocusGuard AI demo video" width="720">
+  <a href="https://buildwithabhinav-ai.github.io/focusguard-ai/docs/demo.html">
+    <img src="docs/assets/demo-poster.jpg" alt="Watch the FocusGuard AI demo video" width="720">
   </a>
   <br>
   <sub>Click the poster to watch the demo video.</sub>
