@@ -107,6 +107,12 @@ It works for individuals and for teams. Organizations, Sub Admins and Super Admi
 
 ## How it fits together
 
+<p align="center">
+  <img src="docs/assets/how-it-works.png" alt="How it works: Track with the Chrome extension, Analyze with FastAPI, Remember with pgvector, Advise with Groq or Gemini" width="100%">
+</p>
+
+The services behind those four steps:
+
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#EEF2FF','primaryTextColor':'#1E1B4B','primaryBorderColor':'#4F46E5','lineColor':'#8B5CF6','secondaryColor':'#FEF9C3','tertiaryColor':'#F5F3FF','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
 flowchart LR
@@ -290,6 +296,10 @@ focusguard-ai/
 ```
 
 <img src="docs/assets/divider.svg" alt="" width="100%">
+
+<p align="center">
+  <img src="docs/assets/social-banner.png" alt="FocusGuard AI: human attention preservation and digital distraction intelligence" width="420">
+</p>
 
 ## Support
 
